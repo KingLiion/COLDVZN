@@ -19,11 +19,11 @@ export default function App() {
       {/* Reduzierter Abstand zwischen Sektionen */}
       <div className="-mt-32">
         <Projects />
+        <About />
       </div>
       
       <GraphicDesign />
       <Photography />
-      <About />
       <Contact />
 
       {/* Footer */}

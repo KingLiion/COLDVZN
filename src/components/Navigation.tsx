@@ -5,9 +5,10 @@ import { Menu, X } from 'lucide-react';
 const menuItems = [
   { id: 'home', label: 'Home' },
   { id: '3d-projects', label: '3D Projects' },
+  { id: 'about', label: 'About Me' },
   { id: 'graphic-design', label: 'Graphic Design' },
   { id: 'photography', label: 'Photography' },
-  { id: 'about', label: 'About Me' },
+  { id: 'Contact', label: 'Contact' },
 ];
 
 export function Navigation() {
