@@ -105,6 +105,32 @@ const photographyImages = [
     orientation: "horizontal",
   },
 
+  // Row 4: vertical, horizontal, vertical, horizontal
+  {
+    url: "https://lh3.googleusercontent.com/d/1bgoZd3_VHzVsZG_1Na23Pes01grnLtUw",
+    title: "Subway Hamburg",
+    category: "Architecture",
+    orientation: "horizontal",
+  },
+  {
+    url: "https://lh3.googleusercontent.com/d/1BW79ypsJeH-4_wANwQfiIOlfR31WHDBC",
+    title: "Manhatten",
+    category: "City",
+    orientation: "horizontal",
+  },
+  {
+    url: "https://lh3.googleusercontent.com/d/19rQBQ4VA4yZhcY9Ux_r5onBaQoRei1b9",
+    title: "Manhatten Bridge",
+    category: "Architecture",
+    orientation: "horizontal",
+  },
+  {
+    url: "https://lh3.googleusercontent.com/d/1ccZPkQkigWzduUFh8I8uwOCHqh_jHkcH",
+    title: "Cherry flowers",
+    category: "Nature",
+    orientation: "horizontal",
+  },
+
   
 ];
 
