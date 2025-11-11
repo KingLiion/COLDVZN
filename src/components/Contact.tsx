@@ -38,7 +38,7 @@ const socialLinks = [
 
 export function Contact() {
   return (
-    <section className="relative bg-black border-t border-white/10 py-20 md:py-32 px-4 md:px-6">
+    <section id="contact" className="relative bg-black border-t border-white/10 py-20 md:py-32 px-4 md:px-6">
 
 
       <div className="relative max-w-6xl mx-auto">

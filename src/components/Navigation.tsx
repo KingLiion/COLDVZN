@@ -4,11 +4,11 @@ import { Menu, X } from 'lucide-react';
 
 const menuItems = [
   { id: 'home', label: 'Home' },
-  { id: '3d-projects', label: '3D Projects' },
   { id: 'about', label: 'About Me' },
+  { id: '3d-projects', label: '3D Projects' },
   { id: 'graphic-design', label: 'Graphic Design' },
   { id: 'photography', label: 'Photography' },
-  { id: 'Contact', label: 'Contact' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 export function Navigation() {
