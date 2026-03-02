@@ -265,69 +265,67 @@ export function About() {
                 title: "Arbeitszeugnis Download",
                 description: "Meine bisherigen Referenzen und Arbeitszeugnisse.",
                 pdfUrl: "/assets/Arbeitszeugnis_Leon Kaltenschnee_signed (3).pdf",
-              }
             ].map((doc, index) => (
-            ].map((doc, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group relative flex flex-col items-center p-6 rounded-3xl bg-zinc-900/50 border border-white/5 overflow-hidden backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]"
-              style={{
-                boxShadow: "0 10px 30px -10px rgba(0,0,0,0.5)"
-              }}
-            >
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                style={{
-                  background: 'radial-gradient(circle at center, rgba(100, 210, 255, 0.1) 0%, transparent 70%)',
-                }}
-              />
-              <div
-                className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{
-                  border: '1px solid rgba(100, 210, 255, 0.3)',
-                  boxShadow: 'inset 0 0 20px rgba(100, 210, 255, 0.1)',
-                }}
-              />
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: index * 0.2 }}
+                    className="group relative flex flex-col items-center p-6 rounded-3xl bg-zinc-900/50 border border-white/5 overflow-hidden backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]"
+                    style={{
+                      boxShadow: "0 10px 30px -10px rgba(0,0,0,0.5)"
+                    }}
+                  >
+                    <div
+                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                      style={{
+                        background: 'radial-gradient(circle at center, rgba(100, 210, 255, 0.1) 0%, transparent 70%)',
+                      }}
+                    />
+                    <div
+                      className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                      style={{
+                        border: '1px solid rgba(100, 210, 255, 0.3)',
+                        boxShadow: 'inset 0 0 20px rgba(100, 210, 255, 0.1)',
+                      }}
+                    />
 
-              <div className="relative w-full aspect-[3/4] max-w-[340px] bg-black/60 rounded-xl mb-6 flex flex-col items-center justify-center border border-white/10 group-hover:border-ice-400/30 transition-colors duration-300 overflow-hidden shadow-2xl">
-                {/* PDF Preview */}
-                <iframe
-                  src={`${doc.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0`}
-                  className="w-full h-full border-none pointer-events-none"
-                  title={doc.title}
-                />
-                {/* Invisible overlay */}
-                <div className="absolute inset-0 z-10" />
+                    <div className="relative w-full aspect-[3/4] max-w-[340px] bg-black/60 rounded-xl mb-6 flex flex-col items-center justify-center border border-white/10 group-hover:border-ice-400/30 transition-colors duration-300 overflow-hidden shadow-2xl">
+                      {/* PDF Preview */}
+                      <iframe
+                        src={`${doc.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0`}
+                        className="w-full h-full border-none pointer-events-none"
+                        title={doc.title}
+                      />
+                      {/* Invisible overlay */}
+                      <div className="absolute inset-0 z-10" />
 
-                <div className="absolute top-4 right-4 px-3 py-1 bg-red-500/20 text-red-400 text-xs font-bold rounded-md border border-red-500/20 flex items-center gap-1 z-20 backdrop-blur-md">
-                  <FileText size={12} />
-                  PDF
-                </div>
-              </div>
+                      <div className="absolute top-4 right-4 px-3 py-1 bg-red-500/20 text-red-400 text-xs font-bold rounded-md border border-red-500/20 flex items-center gap-1 z-20 backdrop-blur-md">
+                        <FileText size={12} />
+                        PDF
+                      </div>
+                    </div>
 
-              <div className="text-center z-10 flex flex-col items-center w-full">
-                <h4 className="text-xl text-white font-medium mb-2 group-hover:text-ice-200 transition-colors duration-300">{doc.title}</h4>
-                <p className="text-white/50 text-sm max-w-[280px] mb-6 px-4">
-                  {doc.description}
-                </p>
+                    <div className="text-center z-10 flex flex-col items-center w-full">
+                      <h4 className="text-xl text-white font-medium mb-2 group-hover:text-ice-200 transition-colors duration-300">{doc.title}</h4>
+                      <p className="text-white/50 text-sm max-w-[280px] mb-6 px-4">
+                        {doc.description}
+                      </p>
 
-                <a
-                  href={doc.pdfUrl}
-                  download
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-ice-400/10 border border-ice-400/20 text-ice-400 hover:bg-ice-400 hover:text-black hover:scale-105 transition-all duration-300 font-medium text-sm shadow-[0_0_20px_rgba(100,210,255,0.1)] hover:shadow-[0_0_30px_rgba(100,210,255,0.4)]"
-                >
-                  <Download size={16} />
-                  Herunterladen
-                </a>
-              </div>
-            </motion.div>
-            ))}
+                      <a
+                        href={doc.pdfUrl}
+                        download
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-6 py-2.5 rounded-full bg-ice-400/10 border border-ice-400/20 text-ice-400 hover:bg-ice-400 hover:text-black hover:scale-105 transition-all duration-300 font-medium text-sm shadow-[0_0_20px_rgba(100,210,255,0.1)] hover:shadow-[0_0_30px_rgba(100,210,255,0.4)]"
+                      >
+                        <Download size={16} />
+                        Herunterladen
+                      </a>
+                    </div>
+                  </motion.div>
+                ))}
           </div>
         </div>
 
