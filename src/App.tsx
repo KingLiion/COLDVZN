@@ -4,6 +4,7 @@ import { Projects } from './components/Projects';
 import { GraphicDesign } from './components/GraphicDesign';
 import { Photography } from './components/Photography';
 import { About } from './components/About';
+import { AboutMe } from './components/AboutMe';
 import { Contact } from './components/Contact';
 import { Snowfall } from './components/Snowfall';
 
@@ -12,18 +13,19 @@ export default function App() {
     <div className="bg-black overflow-x-hidden">
       {/* Dezenter Schneien-Effekt */}
       <Snowfall />
-      
+
       <Navigation />
       <Hero />
-      
+
       {/* Reduzierter Abstand zwischen Sektionen */}
       <div className="-mt-32">
         <About />
         <Projects />
       </div>
-      
+
       <GraphicDesign />
       <Photography />
+      <AboutMe />
       <Contact />
 
       {/* Footer */}

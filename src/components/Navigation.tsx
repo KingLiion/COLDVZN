@@ -4,10 +4,11 @@ import { Menu, X } from 'lucide-react';
 
 const menuItems = [
   { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About Me' },
+  { id: 'about', label: 'About' },
   { id: '3d-projects', label: '3D Projects' },
   { id: 'graphic-design', label: 'Graphic Design' },
   { id: 'photography', label: 'Photography' },
+  { id: 'about-me', label: 'About Me' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -68,7 +69,7 @@ export function Navigation() {
           }}
         >
           {/* Subtle shimmer effect */}
-          <div 
+          <div
             className="absolute inset-0 rounded-full overflow-hidden pointer-events-none"
             style={{
               background: 'linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.03) 50%, transparent 100%)',
@@ -98,20 +99,19 @@ export function Navigation() {
                         0 0 40px rgba(30, 200, 255, 0.2)
                       `,
                     }}
-                    transition={{ 
-                      type: 'spring', 
-                      stiffness: 400, 
-                      damping: 30 
+                    transition={{
+                      type: 'spring',
+                      stiffness: 400,
+                      damping: 30
                     }}
                   />
                 )}
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative px-5 py-2.5 rounded-full transition-all duration-200 ${
-                    activeItem === item.id
+                  className={`relative px-5 py-2.5 rounded-full transition-all duration-200 ${activeItem === item.id
                       ? 'text-black'
                       : 'text-white/70 hover:text-white/90'
-                  }`}
+                    }`}
                 >
                   <span className="relative z-10">
                     {item.label}
@@ -140,7 +140,7 @@ export function Navigation() {
           }}
         >
           {/* Shimmer effect */}
-          <div 
+          <div
             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             style={{
               background: 'linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%)',
@@ -178,11 +178,10 @@ export function Navigation() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 + index * 0.05 }}
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-2xl transition-all duration-200 ${
-                    activeItem === item.id
+                  className={`text-2xl transition-all duration-200 ${activeItem === item.id
                       ? 'text-ice-400'
                       : 'text-white/70 hover:text-white'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </motion.button>
