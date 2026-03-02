@@ -4,11 +4,10 @@ import { Menu, X } from 'lucide-react';
 
 const menuItems = [
   { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About' },
   { id: '3d-projects', label: '3D Projects' },
   { id: 'graphic-design', label: 'Graphic Design' },
   { id: 'photography', label: 'Photography' },
-  { id: 'about-me', label: 'About Me' },
+  { id: 'about', label: 'About Me' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -109,8 +108,8 @@ export function Navigation() {
                 <button
                   onClick={() => scrollToSection(item.id)}
                   className={`relative px-5 py-2.5 rounded-full transition-all duration-200 ${activeItem === item.id
-                      ? 'text-black'
-                      : 'text-white/70 hover:text-white/90'
+                    ? 'text-black'
+                    : 'text-white/70 hover:text-white/90'
                     }`}
                 >
                   <span className="relative z-10">
@@ -179,8 +178,8 @@ export function Navigation() {
                   transition={{ delay: 0.1 + index * 0.05 }}
                   onClick={() => scrollToSection(item.id)}
                   className={`text-2xl transition-all duration-200 ${activeItem === item.id
-                      ? 'text-ice-400'
-                      : 'text-white/70 hover:text-white'
+                    ? 'text-ice-400'
+                    : 'text-white/70 hover:text-white'
                     }`}
                 >
                   {item.label}

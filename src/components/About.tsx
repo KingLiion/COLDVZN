@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Sparkles, Layers, Palette, Camera, Code, Briefcase, GraduationCap } from 'lucide-react';
+import { Sparkles, Layers, Palette, Camera, Code, Briefcase, GraduationCap, Download, FileText } from 'lucide-react';
 
 // ⭐ HIER KANNST DU DEINE SKILLS/FERTIGKEITEN ANPASSEN
 const skills = [
@@ -50,7 +50,7 @@ export function About() {
     <section id="about" className="relative min-h-screen bg-black py-32 px-6">
       <div className="relative max-w-7xl mx-auto">
         {/* Haupttitel */}
-        <motion.h2 
+        <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -62,7 +62,7 @@ export function About() {
 
         {/* Oberer Bereich: Bild und Skills nebeneinander */}
         <div className="grid lg:grid-cols-2 gap-12 mb-20">
-          
+
           {/* Linke Seite - Bild */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -78,7 +78,7 @@ export function About() {
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-              
+
               {/* Floating badge */}
               <div className="absolute bottom-6 left-6 px-4 py-2 rounded-full bg-ice-400/20 border border-ice-400/40 backdrop-blur-md">
                 <div className="flex items-center gap-2">
@@ -97,7 +97,7 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-white mb-6">Skills & Expertise</h3>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {skills.map((skill, index) => (
                 <motion.div
@@ -136,7 +136,7 @@ export function About() {
 
         {/* Unterer Bereich: Text und Timeline nebeneinander */}
         <div className="grid lg:grid-cols-2 gap-12">
-          
+
           {/* Linke Seite - Text */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -146,18 +146,18 @@ export function About() {
             className="space-y-6"
           >
             <h3 className="text-white">Meine Geschichte</h3>
-            
+
             <p className="text-white/70">
-              Mein Name ist Leon Kaltenschnee, ich bin 23 Jahre alt und lebe in Hamburg. 
-              Nach meinem Abitur, das ich 2019 abgeschlossen habe, habe ich meinen Bachelor of Arts in Game Art und 3D Animation am SAE Institut in Frankfurt erworben. 
-              Während meines Studiums habe ich meine Leidenschaft für die Erstellung von 3D-Assets entdeckt. 
+              Mein Name ist Leon Kaltenschnee, ich bin 23 Jahre alt und lebe in Hamburg.
+              Nach meinem Abitur, das ich 2019 abgeschlossen habe, habe ich meinen Bachelor of Arts in Game Art und 3D Animation am SAE Institut in Frankfurt erworben.
+              Während meines Studiums habe ich meine Leidenschaft für die Erstellung von 3D-Assets entdeckt.
               Besonders die Liebe zu den kleinen Details – sei es bei der Texturierung oder dem Feinschliff von Modellen – hat mir gezeigt, wie wichtig Präzision und Ästhetik in der digitalen Kunst sind.
             </p>
-            
+
             <p className="text-white/70">
               Als 3D-Artist habe ich in verschiedenen Projekten wertvolle Erfahrungen gesammelt. Eine besonders prägende Zeit war mein Praktikum bei Rückwand24, wo ich an einer Vielzahl von Projekten beteiligt war. Dort konnte ich meine gestalterischen Fähigkeiten einbringen und Designs sowie Visualisierungen entwickeln, die auf die Wünsche der Kunden abgestimmt waren.
             </p>
-            
+
             <p className="text-white/70">
               Zuvor war ich als Produktdesigner und Entwickler bei BeerBaller tätig. In diesem Rahmen habe ich zwei innovative Produkte gestaltet und von der Idee bis zur Fertigstellung begleitet. Durch meine Mediationsausbildung während der Schulzeit habe ich gelernt, effektiv und lösungsorientiert im Team zu kommunizieren.
             </p>
@@ -193,7 +193,7 @@ export function About() {
                   >
                     {/* Timeline dot */}
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-ice-400 border-4 border-black" />
-                    
+
                     <div className="pb-6">
                       <span className="text-ice-400 text-sm">{item.year}</span>
                       <h4 className="text-white mt-1">{item.title}</h4>
@@ -223,7 +223,7 @@ export function About() {
                   >
                     {/* Timeline dot */}
                     <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-ice-400 border-4 border-black" />
-                    
+
                     <div className="pb-6">
                       <span className="text-ice-400 text-sm">{item.year}</span>
                       <h4 className="text-white mt-1">{item.title}</h4>
@@ -236,6 +236,101 @@ export function About() {
             </div>
           </motion.div>
         </div>
+
+        {/* PDF Documents Grid */}
+        <div className="mt-32">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h3 className="text-3xl font-medium text-white mb-6">
+              Dokumente & Referenzen
+            </h3>
+            <p className="text-white/70 max-w-2xl mx-auto">
+              Lade hier meinen Lebenslauf und meine Arbeitszeugnisse herunter.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+            {[
+              {
+                title: "Lebenslauf Download",
+                description: "Mein detaillierter Werdegang und meine Qualifikationen.",
+                pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+              },
+              {
+                title: "Arbeitszeugnis Download",
+                description: "Meine bisherigen Referenzen und Arbeitszeugnisse.",
+                pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+              }
+            ].map((doc, index) => (
+              <motion.a
+                key={index}
+                href={doc.pdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="group relative flex flex-col items-center p-8 rounded-3xl bg-zinc-900/50 border border-white/5 overflow-hidden backdrop-blur-sm transition-all duration-500 hover:scale-[1.02]"
+                style={{
+                  boxShadow: "0 10px 30px -10px rgba(0,0,0,0.5)"
+                }}
+              >
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{
+                    background: 'radial-gradient(circle at center, rgba(100, 210, 255, 0.1) 0%, transparent 70%)',
+                  }}
+                />
+                <div
+                  className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{
+                    border: '1px solid rgba(100, 210, 255, 0.3)',
+                    boxShadow: 'inset 0 0 20px rgba(100, 210, 255, 0.1)',
+                  }}
+                />
+
+                <div className="w-full aspect-[3/4] max-w-[280px] bg-black/60 rounded-xl mb-8 flex flex-col items-center justify-center relative border border-white/10 group-hover:border-ice-400/30 transition-colors duration-300 overflow-hidden shadow-2xl">
+                  <div className="absolute top-4 right-4 px-3 py-1 bg-red-500/20 text-red-400 text-xs font-bold rounded-md border border-red-500/20 flex items-center gap-1 z-10 backdrop-blur-md">
+                    <FileText size={12} />
+                    PDF
+                  </div>
+
+                  <FileText size={64} className="text-white/20 group-hover:text-ice-400/50 transition-colors duration-500 mb-4" />
+                  <div className="w-3/4 h-2 bg-white/10 rounded-full mb-3" />
+                  <div className="w-2/3 h-2 bg-white/10 rounded-full mb-3" />
+                  <div className="w-5/6 h-2 bg-white/10 rounded-full mb-3" />
+                  <div className="w-1/2 h-2 bg-white/10 rounded-full" />
+
+                  <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all duration-300">
+                    <div className="w-16 h-16 rounded-full bg-ice-400/20 border border-ice-400/30 flex items-center justify-center text-ice-400 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                      <Download size={28} />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center z-10">
+                  <h3 className="text-2xl font-medium text-white mb-3 group-hover:text-ice-200 transition-colors duration-300">
+                    {doc.title}
+                  </h3>
+                  <p className="text-white/50 text-sm max-w-[280px] mx-auto">
+                    {doc.description}
+                  </p>
+
+                  <div className="mt-4 text-xs text-ice-400/50 font-mono opacity-0 group-hover:opacity-100 transition-opacity">
+                    {`<!-- Change href here -->`}
+                  </div>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );
