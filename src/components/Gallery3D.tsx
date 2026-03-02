@@ -121,7 +121,7 @@ export function Gallery3D() {
       >
         <div
           className="relative w-full"
-          style={{ aspectRatio: '16/9', maxWidth: '85vw' }}
+          style={{ aspectRatio: '16/9', maxWidth: '75vw' }}
         >
           {galleryProjects.map((project, index) => {
             const position = getCardPosition(index);

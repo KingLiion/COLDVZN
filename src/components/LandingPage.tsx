@@ -134,7 +134,7 @@ export function LandingPage() {
                   <h1
                     className="text-white leading-none"
                     style={{
-                      fontSize: 'clamp(3rem, 10vw, 7rem)',
+                      fontSize: 'clamp(3.5rem, 12vw, 8rem)',
                       fontWeight: 700,
                       letterSpacing: '-0.03em',
                     }}
@@ -153,7 +153,7 @@ export function LandingPage() {
                   transition={{ duration: 0.8, delay: 0.7 }}
                   className="text-white/80 max-w-md"
                   style={{
-                    fontSize: 'clamp(0.9rem, 1.5vw, 1.15rem)',
+                    fontSize: 'clamp(1rem, 2vw, 1.25rem)',
                     lineHeight: '1.7',
                   }}
                 >
@@ -188,13 +188,13 @@ export function LandingPage() {
               </motion.div>
 
               {/* Rechte Seite - 2 Freigestellte Rendering Bilder (über dem Text, z-20) */}
-              <div className="relative h-[700px] md:h-[850px] z-20">
+              <div className="relative h-[600px] md:h-[700px] z-20">
                 {/* Bild 1 - Oben links */}
                 <motion.div
                   initial={{ opacity: 0, y: -50, rotateZ: -10 }}
                   animate={{ opacity: 1, y: 0, rotateZ: 0 }}
                   transition={{ duration: 1.2, delay: 0.4 }}
-                  className="absolute top-0 left-[-10%] w-[110%]"
+                  className="absolute top-0 left-0 w-3/4"
                   style={{
                     filter: 'drop-shadow(0 20px 40px rgba(56, 189, 248, 0.4))',
                   }}
@@ -204,7 +204,7 @@ export function LandingPage() {
                     alt="3D Render 1"
                     className="w-full h-auto object-contain"
                     animate={{
-                      y: [0, -20, 0],
+                      y: [0, -15, 0],
                       rotateZ: [0, 2, 0],
                     }}
                     transition={{
@@ -220,7 +220,7 @@ export function LandingPage() {
                   initial={{ opacity: 0, y: 50, rotateZ: 10 }}
                   animate={{ opacity: 1, y: 0, rotateZ: 0 }}
                   transition={{ duration: 1.2, delay: 0.6 }}
-                  className="absolute bottom-[-5%] right-[-10%] w-[110%]"
+                  className="absolute bottom-0 right-0 w-3/4"
                   style={{
                     filter: 'drop-shadow(0 20px 40px rgba(125, 211, 252, 0.4))',
                   }}
@@ -230,7 +230,7 @@ export function LandingPage() {
                     alt="3D Render 2"
                     className="w-full h-auto object-contain"
                     animate={{
-                      y: [0, 20, 0],
+                      y: [0, 15, 0],
                       rotateZ: [0, -2, 0],
                     }}
                     transition={{
