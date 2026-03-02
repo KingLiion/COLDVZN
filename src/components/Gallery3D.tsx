@@ -40,6 +40,12 @@ export const galleryProjects = [
     title: 'Crystalline Structure',
     subtitle: 'Mathematical Beauty',
   },
+  {
+    id: 'london-telephone-box',
+    url: 'https://cdnb.artstation.com/p/assets/images/images/065/171/711/large/leon-kaltenschnee-render-005.jpg?1689699385',
+    title: 'London Telephone Box',
+    subtitle: 'Game Assets / Props',
+  },
 ];
 
 export function Gallery3D() {

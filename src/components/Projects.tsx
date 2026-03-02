@@ -140,6 +140,30 @@ const projectDetails = [
     ],
     technologies: ['Houdini', 'Mantra', 'ZBrush', 'Substance Designer'],
   },
+  {
+    id: 'london-telephone-box',
+    title: 'London Telephone Box',
+    subtitle: 'Game Assets / Props',
+    category: 'Digital 3D',
+    date: 'July 2023',
+    description: 'As part of my Bachelor\'s project, titled \'Modern London Street,\' I had the exciting opportunity to create a contemporary London street in a 3D environment. During the implementation, I incorporated the famous red London telephone booth. These telephone booths have become an iconic symbol of the British capital, representing the charm and history of the city.',
+    challenge: 'In my project, I strived to capture the essence of modern London by meticulously designing the street with attention to detail. The inclusion of the red telephone booth was essential in conveying the character and ambiance of the cityscape.',
+    solution: 'By faithfully recreating this iconic element, I aimed to pay homage to its significance in the cultural fabric of London, utilizing high-quality texturing and precise modeling techniques to match real-world references.',
+    results: [
+      'Featured on ArtStation',
+      'Realistic Game Asset Creation',
+      'High-detail Hard Surface Modeling'
+    ],
+    images: [
+      'https://cdnb.artstation.com/p/assets/images/images/065/171/711/large/leon-kaltenschnee-render-005.jpg?1689699385',
+      'https://cdnb.artstation.com/p/assets/images/images/065/179/277/large/leon-kaltenschnee-render.jpg?1689712390',
+      'https://cdnb.artstation.com/p/assets/images/images/065/179/213/large/leon-kaltenschnee-new-project-81.jpg?1689712223',
+      'https://cdna.artstation.com/p/assets/images/images/065/179/356/large/leon-kaltenschnee-new-project-82.jpg?1689712570',
+      'https://cdna.artstation.com/p/assets/images/images/065/171/716/large/leon-kaltenschnee-render-008.jpg?1689699403'
+    ],
+    technologies: ['Blender', 'Substance Painter', 'Unreal Engine', 'ZBrush'],
+    show3DModel: false,
+  },
 ];
 
 export function Projects() {
@@ -163,7 +187,7 @@ export function Projects() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 
+              <h2
                 className="mb-4 bg-gradient-to-r from-ice-200 via-ice-400 to-ice-200 bg-clip-text text-transparent"
                 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}
               >
