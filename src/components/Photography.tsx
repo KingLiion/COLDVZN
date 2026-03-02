@@ -7,13 +7,13 @@ const photographyImages = [
   // New Row 1: 2 horizontal images
   {
     url: "/assets/skyline_farbe-2.jpg",
-    title: "Hamburg Skyline 1",
+    title: "NewYork Skyline 1",
     category: "Architecture",
     orientation: "horizontal",
   },
   {
     url: "/assets/skyline_farbe-8.jpg",
-    title: "Hamburg Skyline 2",
+    title: "NewYork Skyline 2",
     category: "Architecture",
     orientation: "horizontal",
   },
