@@ -151,11 +151,12 @@ export function Photography() {
         onClick={() => setSelectedImage(globalIndex)}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`group relative rounded-xl overflow-hidden cursor-pointer bg-zinc-900 ${image.orientation === "horizontal" ? "col-span-2" : "col-span-1"
-          }`}
+        className="group relative rounded-xl overflow-hidden cursor-pointer bg-zinc-900"
         style={{
           aspectRatio:
             image.orientation === "vertical" ? "9/16" : "16/9",
+          gridColumn:
+            image.orientation === "horizontal" ? "span 2 / span 2" : "span 1 / span 1"
         }}
       >
         {/* Image */}
