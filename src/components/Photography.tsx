@@ -4,6 +4,32 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 // Bilder optimiert für keine Lücken
 const photographyImages = [
+  // New Row 1: 2 horizontal images
+  {
+    url: "https://lh3.googleusercontent.com/d/1bVYNychp_7EU5I_H6zCE9KcUgDWpzyIG",
+    title: "New Horizontal 1",
+    category: "Architecture",
+    orientation: "horizontal",
+  },
+  {
+    url: "https://lh3.googleusercontent.com/d/1TVltU7xRcgmSuEpCtmAQFzz-JKEDosG6",
+    title: "New Horizontal 2",
+    category: "Nature",
+    orientation: "horizontal",
+  },
+  // New Row 2: 2 horizontal images
+  {
+    url: "https://lh3.googleusercontent.com/d/1Yvf59uI-ZyqS1vD0mvkxOAlvqj6P7FK2",
+    title: "New Horizontal 3",
+    category: "Landscape",
+    orientation: "horizontal",
+  },
+  {
+    url: "https://lh3.googleusercontent.com/d/1bcL1zcVpkHWgjpTRterwUdDqSpGJ9xc4",
+    title: "New Horizontal 4",
+    category: "Architecture",
+    orientation: "horizontal",
+  },
   // Row 1: 4 vertical images
   {
     url: "https://lh3.googleusercontent.com/d/1bSsMhHzKJGfPp-bXVv4ehGGvFobOBO97",
