@@ -6,15 +6,15 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 const photographyImages = [
   // New Row 1: 2 horizontal images
   {
-    url: "https://lh3.googleusercontent.com/d/1bVYNychp_7EU5I_H6zCE9KcUgDWpzyIG",
-    title: "New Horizontal 1",
+    url: "/assets/skyline_farbe-2.jpg",
+    title: "Hamburg Skyline 1",
     category: "Architecture",
     orientation: "horizontal",
   },
   {
-    url: "https://lh3.googleusercontent.com/d/1TVltU7xRcgmSuEpCtmAQFzz-JKEDosG6",
-    title: "New Horizontal 2",
-    category: "Nature",
+    url: "/assets/skyline_farbe-8.jpg",
+    title: "Hamburg Skyline 2",
+    category: "Architecture",
     orientation: "horizontal",
   },
   // New Row 2: 2 horizontal images

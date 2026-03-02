@@ -259,12 +259,12 @@ export function About() {
               {
                 title: "Lebenslauf Download",
                 description: "Mein detaillierter Werdegang und meine Qualifikationen.",
-                pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                pdfUrl: "/assets/Lebenslauf.pdf",
               },
               {
                 title: "Arbeitszeugnis Download",
                 description: "Meine bisherigen Referenzen und Arbeitszeugnisse.",
-                pdfUrl: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                pdfUrl: "/assets/Arbeitszeugnis_Leon Kaltenschnee_signed (3).pdf",
               }
             ].map((doc, index) => (
               <motion.a
