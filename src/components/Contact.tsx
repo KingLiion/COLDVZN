@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Instagram, Linkedin, Github, Palette } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin, MessageSquare, Palette } from 'lucide-react';
 
 // ⭐ HIER KANNST DU DEINE KONTAKTDATEN ANPASSEN
 const contactInfo = {
@@ -19,19 +19,19 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     icon: Linkedin,
-    url: 'https://linkedin.com/in/yourprofile',
+    url: 'https://www.linkedin.com/in/leon-kaltenschnee-05a865286/',
     color: '#0A66C2',
   },
   {
-    name: 'GitHub',
-    icon: Github,
-    url: 'https://github.com/yourusername',
-    color: '#fff',
+    name: 'Discord',
+    icon: MessageSquare,
+    url: 'https://discordapp.com/users/leonkaltenschnee',
+    color: '#5865F2',
   },
   {
     name: 'ArtStation',
     icon: Palette,
-    url: 'https://artstation.com/leonkaltenschnee',
+    url: 'https://www.artstation.com/leon_kaltenschnee',
     color: '#13AFF0',
   },
 ];
@@ -50,14 +50,14 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 
+            <h2
               className="mb-6 bg-gradient-to-r from-ice-200 via-ice-400 to-ice-200 bg-clip-text text-transparent"
               style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}
             >
               Let's Connect
             </h2>
             <p className="text-white/70 mb-8 max-w-lg">
-              Interested in collaborating or have a project in mind? Feel free to reach out. 
+              Interested in collaborating or have a project in mind? Feel free to reach out.
               I'm always open to discussing new opportunities and creative ideas.
             </p>
 
@@ -146,16 +146,16 @@ export function Contact() {
                   className="group relative p-6 rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-950 border border-white/10 hover:border-ice-400/50 transition-all duration-300 overflow-hidden"
                 >
                   {/* Hover glow */}
-                  <div 
+                  <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl"
-                    style={{ 
-                      background: `radial-gradient(circle at center, ${social.color}15, transparent 70%)` 
+                    style={{
+                      background: `radial-gradient(circle at center, ${social.color}15, transparent 70%)`
                     }}
                   />
 
                   <div className="relative">
-                    <social.icon 
-                      size={28} 
+                    <social.icon
+                      size={28}
                       className="text-white/70 group-hover:text-white transition-colors mb-3"
                       style={{ color: `${social.color}` }}
                     />
