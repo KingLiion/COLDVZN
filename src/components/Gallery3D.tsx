@@ -47,26 +47,28 @@ export function Gallery3D() {
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
+    setIsAnimating(true);
+    const timeout = setTimeout(() => setIsAnimating(false), 700);
+    return () => clearTimeout(timeout);
+  }, [currentIndex]);
+
+  useEffect(() => {
     const interval = setInterval(() => {
-      handleNext();
+      setCurrentIndex((prev) => (prev + 1) % galleryProjects.length);
     }, 5000); // Automatischer Wechsel alle 5 Sekunden
 
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, []);
 
   const handleThumbnailClick = (index: number) => {
     if (index !== currentIndex && !isAnimating) {
-      setIsAnimating(true);
       setCurrentIndex(index);
-      setTimeout(() => setIsAnimating(false), 700);
     }
   };
 
   const handleNext = () => {
     if (!isAnimating) {
-      setIsAnimating(true);
       setCurrentIndex((prev) => (prev + 1) % galleryProjects.length);
-      setTimeout(() => setIsAnimating(false), 700);
     }
   };
 
@@ -110,20 +112,20 @@ export function Gallery3D() {
       </motion.div>
 
       {/* 3D Card Stack Gallery - 16:9 horizontal wie Artikel-Galerie */}
-      <div 
+      <div
         className="relative w-full flex-1 flex items-center justify-center px-3 md:px-6 lg:px-8 mb-16"
-        style={{ 
+        style={{
           perspective: '2000px',
           perspectiveOrigin: 'center center',
         }}
       >
-        <div 
-          className="relative w-full" 
+        <div
+          className="relative w-full"
           style={{ aspectRatio: '16/9', maxWidth: '85vw' }}
         >
           {galleryProjects.map((project, index) => {
             const position = getCardPosition(index);
-            
+
             return (
               <motion.div
                 key={index}
@@ -145,7 +147,7 @@ export function Gallery3D() {
                 }}
                 onClick={() => position === 0 && handleCardClick(project.id)}
               >
-                <div 
+                <div
                   className="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden group"
                   style={{
                     boxShadow: `
@@ -162,7 +164,7 @@ export function Gallery3D() {
                       transform: position === 0 ? 'scale(1.02)' : 'scale(1)',
                     }}
                   />
-                  
+
                   {/* Overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
@@ -188,7 +190,7 @@ export function Gallery3D() {
                             <div className="flex gap-2 md:gap-3">
                               {galleryProjects.map((img, idx) => {
                                 const isActive = idx === currentIndex;
-                                
+
                                 return (
                                   <motion.button
                                     key={idx}
@@ -215,7 +217,7 @@ export function Gallery3D() {
                                       }}
                                     />
                                     {isActive && (
-                                      <div 
+                                      <div
                                         className="absolute inset-0 pointer-events-none"
                                         style={{
                                           boxShadow: 'inset 0 0 0 1px rgba(56, 189, 248, 0.5), 0 0 8px rgba(56, 189, 248, 0.3)',

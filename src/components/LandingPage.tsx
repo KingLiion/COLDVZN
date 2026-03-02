@@ -12,7 +12,7 @@ const subtitles = [
 export function LandingPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [currentSubtitle, setCurrentSubtitle] = useState(0);
-  
+
   // Wechselnder Untertitel
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,20 +31,20 @@ export function LandingPage() {
   const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
-    <div 
+    <div
       ref={containerRef}
       className="relative min-h-screen"
     >
       {/* Sticky Container mit separatem Hintergrund */}
       <div className="sticky top-0 h-screen overflow-hidden">
-        
+
         {/* Separater interessanter Hintergrund - blendet sanft aus beim Scrollen */}
-        <motion.div 
+        <motion.div
           className="absolute inset-0 z-0"
           style={{ opacity: backgroundOpacity }}
         >
           {/* Dynamischer Verlauf Hintergrund mit weichem Übergang */}
-          <div 
+          <div
             className="absolute inset-0"
             style={{
               background: `
@@ -55,15 +55,15 @@ export function LandingPage() {
               `,
             }}
           />
-          
+
           {/* Weicher Übergang nach unten */}
-          <div 
+          <div
             className="absolute bottom-0 left-0 right-0 h-64"
             style={{
               background: 'linear-gradient(to bottom, transparent 0%, #000000 100%)',
             }}
           />
-          
+
           {/* Subtile Eislinien */}
           <svg className="absolute inset-0 w-full h-full opacity-20" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -75,7 +75,7 @@ export function LandingPage() {
             <path d="M0,200 Q400,150 800,200 T1600,200" stroke="url(#iceGrad)" strokeWidth="2" fill="none" opacity="0.6" />
             <path d="M0,400 Q400,350 800,400 T1600,400" stroke="url(#iceGrad)" strokeWidth="2" fill="none" opacity="0.4" />
             <path d="M0,600 Q400,550 800,600 T1600,600" stroke="url(#iceGrad)" strokeWidth="2" fill="none" opacity="0.3" />
-            
+
             {/* Kristall-Muster */}
             <circle cx="15%" cy="25%" r="2" fill="#38bdf8" opacity="0.6" />
             <circle cx="85%" cy="75%" r="3" fill="#7dd3fc" opacity="0.5" />
@@ -84,7 +84,7 @@ export function LandingPage() {
           </svg>
 
           {/* Noise Texture */}
-          <div 
+          <div
             className="absolute inset-0 opacity-[0.02]"
             style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' /%3E%3C/svg%3E")`,
@@ -93,13 +93,13 @@ export function LandingPage() {
         </motion.div>
 
         {/* Content Container */}
-        <motion.div 
+        <motion.div
           className="relative h-full z-30 flex items-center"
           style={{ opacity: contentOpacity }}
         >
           <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
             <div className="grid md:grid-cols-2 gap-16 items-center relative">
-              
+
               {/* Linke Seite - Text (hinter den Bildern, z-10) */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -131,10 +131,10 @@ export function LandingPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.5 }}
                 >
-                  <h1 
+                  <h1
                     className="text-white leading-none"
                     style={{
-                      fontSize: 'clamp(3.5rem, 12vw, 8rem)',
+                      fontSize: 'clamp(3rem, 10vw, 7rem)',
                       fontWeight: 700,
                       letterSpacing: '-0.03em',
                     }}
@@ -153,7 +153,7 @@ export function LandingPage() {
                   transition={{ duration: 0.8, delay: 0.7 }}
                   className="text-white/80 max-w-md"
                   style={{
-                    fontSize: 'clamp(1rem, 2vw, 1.25rem)',
+                    fontSize: 'clamp(0.9rem, 1.5vw, 1.15rem)',
                     lineHeight: '1.7',
                   }}
                 >
@@ -188,13 +188,13 @@ export function LandingPage() {
               </motion.div>
 
               {/* Rechte Seite - 2 Freigestellte Rendering Bilder (über dem Text, z-20) */}
-              <div className="relative h-[600px] md:h-[700px] z-20">
+              <div className="relative h-[700px] md:h-[850px] z-20">
                 {/* Bild 1 - Oben links */}
                 <motion.div
                   initial={{ opacity: 0, y: -50, rotateZ: -10 }}
                   animate={{ opacity: 1, y: 0, rotateZ: 0 }}
                   transition={{ duration: 1.2, delay: 0.4 }}
-                  className="absolute top-0 left-0 w-3/4"
+                  className="absolute top-0 left-[-10%] w-[110%]"
                   style={{
                     filter: 'drop-shadow(0 20px 40px rgba(56, 189, 248, 0.4))',
                   }}
@@ -204,7 +204,7 @@ export function LandingPage() {
                     alt="3D Render 1"
                     className="w-full h-auto object-contain"
                     animate={{
-                      y: [0, -15, 0],
+                      y: [0, -20, 0],
                       rotateZ: [0, 2, 0],
                     }}
                     transition={{
@@ -220,7 +220,7 @@ export function LandingPage() {
                   initial={{ opacity: 0, y: 50, rotateZ: 10 }}
                   animate={{ opacity: 1, y: 0, rotateZ: 0 }}
                   transition={{ duration: 1.2, delay: 0.6 }}
-                  className="absolute bottom-0 right-0 w-3/4"
+                  className="absolute bottom-[-5%] right-[-10%] w-[110%]"
                   style={{
                     filter: 'drop-shadow(0 20px 40px rgba(125, 211, 252, 0.4))',
                   }}
@@ -230,7 +230,7 @@ export function LandingPage() {
                     alt="3D Render 2"
                     className="w-full h-auto object-contain"
                     animate={{
-                      y: [0, 15, 0],
+                      y: [0, 20, 0],
                       rotateZ: [0, -2, 0],
                     }}
                     transition={{
