@@ -131,12 +131,6 @@ export function Photography() {
     }
   };
 
-  // Organize in rows of 4
-  const rows = [];
-  for (let i = 0; i < photographyImages.length; i += 4) {
-    rows.push(photographyImages.slice(i, i + 4));
-  }
-
   const renderImageCard = (
     image: (typeof photographyImages)[0],
     globalIndex: number,
@@ -156,7 +150,9 @@ export function Photography() {
       onClick={() => setSelectedImage(globalIndex)}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="group relative rounded-xl overflow-hidden cursor-pointer bg-zinc-900"
+      className={`group relative rounded-xl overflow-hidden cursor-pointer bg-zinc-900 ${
+        image.orientation === "horizontal" ? "col-span-2" : "col-span-1"
+      }`}
       style={{
         aspectRatio:
           image.orientation === "vertical" ? "9/16" : "16/9",
@@ -226,19 +222,9 @@ export function Photography() {
           </p>
         </motion.div>
 
-        {/* Row-based Grid - No Gaps */}
-        <div className="space-y-3 md:space-y-4">
-          {rows.map((row, rowIndex) => (
-            <div
-              key={rowIndex}
-              className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4"
-            >
-              {row.map((image, colIndex) => {
-                const globalIndex = rowIndex * 4 + colIndex;
-                return renderImageCard(image, globalIndex);
-              })}
-            </div>
-          ))}
+        {/* Responsive Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          {photographyImages.map((image, index) => renderImageCard(image, index))}
         </div>
       </div>
 
