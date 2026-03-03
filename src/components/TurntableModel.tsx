@@ -32,7 +32,7 @@ function Model() {
 
 export default function TurntableModel() {
   return (
-    <div className="w-full h-[70vh] md:h-[80vh] min-h-[70vh] md:min-h-[80vh] flex justify-center items-stretch relative cursor-grab active:cursor-grabbing">
+    <div className="w-screen h-screen flex justify-center items-stretch relative cursor-grab active:cursor-grabbing">
       <Canvas
         style={{ width: '100%', height: '100%' }}
         gl={{ alpha: true, antialias: true }}
