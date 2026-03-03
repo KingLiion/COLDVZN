@@ -132,13 +132,13 @@ const projectDetails = [
     subtitle: 'Game Assets / Props',
     category: 'Digital 3D',
     date: 'July 2023',
-    description: 'As part of my Bachelor\'s project, titled \'Modern London Street,\' I had the exciting opportunity to create a contemporary London street in a 3D environment. During the implementation, I incorporated the famous red London telephone booth. These telephone booths have become an iconic symbol of the British capital, representing the charm and history of the city.',
+    description: 'As part of my Bachelor\'s project, titled "Modern London Street," I had the exciting opportunity to create a contemporary London street in a 3D environment. During the implementation, I incorporated the famous red London telephone booth. These telephone booths have become an iconic symbol of the British capital, representing the charm and history of the city.',
     challenge: 'In my project, I strived to capture the essence of modern London by meticulously designing the street with attention to detail. The inclusion of the red telephone booth was essential in conveying the character and ambiance of the cityscape.',
     solution: 'By faithfully recreating this iconic element, I aimed to pay homage to its significance in the cultural fabric of London, utilizing high-quality texturing and precise modeling techniques to match real-world references.',
     results: [
       'Featured on ArtStation',
       'Realistic Game Asset Creation',
-      'High-detail Hard Surface Modeling'
+      'High-detail Hard Surface Modeling',
     ],
     images: [
       'https://cdnb.artstation.com/p/assets/images/images/065/171/711/large/leon-kaltenschnee-render-005.jpg?1689699385',
@@ -148,7 +148,8 @@ const projectDetails = [
       'https://cdna.artstation.com/p/assets/images/images/065/171/716/large/leon-kaltenschnee-render-008.jpg?1689699403',
     ],
     technologies: ['Blender', 'Substance Painter', 'Unreal Engine', 'ZBrush'],
-    show3DModel: true, // Aktiviert Turntable
+    show3DModel: true,
+    extra3DComponent: <TurntableModel />, // <-- nur hier das 3D-Fenster
   },
 ];
 
@@ -163,7 +164,6 @@ export function Projects() {
   return (
     <section id="3d-projects" className="relative bg-black">
       <div className="relative">
-        {/* Section Header */}
         <div className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -184,7 +184,6 @@ export function Projects() {
               </p>
             </motion.div>
 
-            {/* Project Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-24">
               {galleryProjects.map((project, index) => (
                 <HoverCard
@@ -208,6 +207,7 @@ export function Projects() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-300" />
                       <div className="absolute inset-0 bg-ice-400/0 group-hover:bg-ice-400/10 transition-colors duration-300" />
                     </div>
+
                     <div className="p-6">
                       <p className="text-white/60 mb-1 text-sm">
                         {project.subtitle}
@@ -228,14 +228,7 @@ export function Projects() {
 
         {/* Project Details */}
         {projectDetails.map((project) => (
-          <div key={project.id}>
-            <ProjectDetail {...project} />
-
-            {/* Nur für London Telephone Box: Turntable */}
-            {project.show3DModel && project.id === 'london-telephone-box' && (
-              <TurntableModel />
-            )}
-          </div>
+          <ProjectDetail key={project.id} {...project} />
         ))}
       </div>
     </section>
