@@ -4,12 +4,7 @@ import { HoverCard } from './HoverCard';
 
 // ⭐ HIER KANNST DU DEINE EIGENEN BILDER EINFÜGEN
 export const galleryProjects = [
-  {
-    id: 'quantum-sphere',
-    url: 'https://images.unsplash.com/photo-1749621245916-910ef8a23e9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMHJlbmRlciUyMGFydHxlbnwxfHx8fDE3NjE0MDgwNTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    title: 'Quantum Sphere',
-    subtitle: 'Digital Sculpture',
-  },
+
   {
     id: 'abstract-forms',
     url: 'https://images.unsplash.com/photo-1637246344338-2afcfb02e766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNjdWxwdHVyZXxlbnwxfHx8fDE3NjEzNTcwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
