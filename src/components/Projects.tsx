@@ -1,33 +1,11 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { ProjectDetail } from './ProjectDetail';
 import { galleryProjects } from './Gallery3D';
 import { HoverCard } from './HoverCard';
 
 // ⭐ PROJEKT-DETAILS - Diese werden mit den Gallery-Karten verlinkt
 const projectDetails = [
-  {
-    id: 'quantum-sphere',
-    title: 'Quantum Sphere',
-    subtitle: 'Digital Sculpture',
-    category: '3D Design',
-    date: 'October 2024',
-    description: 'An exploration of form and light through advanced 3D rendering techniques, creating a mesmerizing digital sculpture that challenges perception.',
-    challenge: 'The challenge was to create a visually striking 3D sculpture that would captivate viewers while maintaining technical precision. The project required balancing artistic vision with computational constraints, ensuring the final render would be both beautiful and performant.',
-    solution: 'By utilizing advanced ray-tracing techniques and procedural modeling, I created a dynamic sphere that interacts with light in unexpected ways. The use of metallic and glass materials creates depth and complexity, while the geometric patterns add a layer of mathematical precision to the organic forms.',
-    results: [
-      'Featured in Digital Arts Magazine',
-      'Over 50,000 views on social media',
-      'Selected for international digital art exhibition',
-      'Commissioned for commercial use by tech company',
-    ],
-    images: [
-      'https://images.unsplash.com/photo-1749621245916-910ef8a23e9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMHJlbmRlciUyMGFydHxlbnwxfHx8fDE3NjE0MDgwNTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGdlb21ldHJpYyUyMGFydHxlbnwxfHx8fDE3NjE0NTY3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFic3RyYWN0JTIwc2hhcGVzfGVufDF8fHx8MTc2MTQ1Njc4N3ww&ixlib=rb-4.1.0&q=80&w=1080',
-    ],
-    technologies: ['Blender', 'Cycles Renderer', 'Substance Painter', 'After Effects'],
-    show3DModel: true,
-  },
+
   {
     id: 'abstract-forms',
     title: 'Abstract Forms',
@@ -46,7 +24,7 @@ const projectDetails = [
     images: [
       'https://images.unsplash.com/photo-1637246344338-2afcfb02e766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNjdWxwdHVyZXxlbnwxfHx8fDE3NjEzNTcwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
       'https://images.unsplash.com/photo-1710858775474-08799a698bbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFic3RyYWN0JTIwYXJ0fGVufDF8fHx8MTc2MTQwNzY4MXww&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1759265685207-4f3ca08233b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwYXJ0JTIwY29uY2VwdHxlbnwxfHx8fDE3NjEzMjQyODZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1759265685207-4f3ca08233b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxkaWdpdGFsJTIwYXJ0JTIwY29uY2VwdHxlbnwxfHx8fDE3NjEzMjQyODZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     ],
     technologies: ['Cinema 4D', 'Octane Render', 'Houdini', 'Photoshop'],
   },
@@ -67,8 +45,8 @@ const projectDetails = [
     ],
     images: [
       'https://images.unsplash.com/photo-1646936190308-6faef1ac893c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwYXJ0fGVufDF8fHx8MTc2MTQwODA1M3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1675350174784-e76296667d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBkZXNpZ258ZW58MXx8fHwxNzYxMzM5MzI3fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1722880805722-d212c7630855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFwaGljJTIwZGVzaWduJTIwd29ya3xlbnwxfHx8fDE3NjE0MDIyODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1675350174784-e76296667d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtb2Rlcm4lMjBhcmchiXRlY3R1cmUlMjBkZXNpZ258ZW58MXx8fHwxNzYxMzM5MzI3fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1722880805722-d212c7630855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxncmFwaGljJTIwZGVzaWduJTIwd29ya3xlbnwxfHx8fDE3NjE0MDIyODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
     ],
     technologies: ['Blender', 'Arnold Renderer', 'Illustrator', 'Figma'],
     show3DModel: true,
@@ -90,8 +68,8 @@ const projectDetails = [
     ],
     images: [
       'https://images.unsplash.com/photo-1688486134221-dfa7d4c45073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnZW9tZXRyaWMlMjBkZXNpZ258ZW58MXx8fHwxNzYxNDA1NjE4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGdlb21ldHJpYyUyMGFydHxlbnwxfHx8fDE3NjE0NTY3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1743446770828-180040aba491?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoeSUyMHBvcnRmb2xpb3xlbnwxfHx8fDE3NjEzNzc0OTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHwzRCUyMGdlb21ldHJpYyUyMGFydHxlbnwxfHx8fDE3NjE0NTY3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1743446770828-180040aba491?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxwaG90b2dyYXBoeSUyMHBvcnRmb2xpb3xlbnwxfHx8fDE3NjEzNzc0OTd8MA&ixlib=rb-4.1.0&q=80&w=1080',
     ],
     technologies: ['Grasshopper', 'Rhino 3D', 'V-Ray', 'Processing'],
     show3DModel: true,
@@ -112,9 +90,9 @@ const projectDetails = [
       'Over 100,000 impressions on Behance',
     ],
     images: [
-      'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFic3RyYWN0JTIwc2hhcGVzfGVufDF8fHx8MTc2MTQ1Njc4N3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFic3RyYWN0JTIwc2hhcGVzfGVuMHwxfHx8fDE3NjE0NTY3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080',
       'https://images.unsplash.com/photo-1710858775474-08799a698bbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFic3RyYWN0JTIwYXJ0fGVufDF8fHx8MTc2MTQwNzY4MXww&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1759265685207-4f3ca08233b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwYXJ0JTIwY29uY2VwdHxlbnwxfHx8fDE3NjEzMjQyODZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1759265685207-4f3ca08233b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxkaWdpdGFsJTIwYXJ0JTIwY29uY2VwdHxlbnwxfHx8fDE3NjEzMjQyODZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     ],
     technologies: ['Houdini', 'Redshift', 'Cinema 4D', 'X-Particles'],
   },
@@ -136,7 +114,7 @@ const projectDetails = [
     images: [
       'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGdlb21ldHJpYyUyMGFydHxlbnwxfHx8fDE3NjE0NTY3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080',
       'https://images.unsplash.com/photo-1749621245916-910ef8a23e9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMHJlbmRlciUyMGFydHxlbnwxfHx8fDE3NjE0MDgwNTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1688486134221-dfa7d4c45073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnZW9tZXRyaWMlMjBkZXNpZ258ZW58MXx8fHwxNzYxNDA1NjE4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1688486134221-dfa7d4c45073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxnZW9tZXRyaWMlMjBkZXNpZ258ZW58MXx8fHwxNzYxNDA1NjE4fDA&ixlib=rb-4.1.0&q=80&w=1080',
     ],
     technologies: ['Houdini', 'Mantra', 'ZBrush', 'Substance Designer'],
   },
@@ -159,7 +137,13 @@ const projectDetails = [
       'https://cdnb.artstation.com/p/assets/images/images/065/179/277/large/leon-kaltenschnee-render.jpg?1689712390',
       'https://cdnb.artstation.com/p/assets/images/images/065/179/213/large/leon-kaltenschnee-new-project-81.jpg?1689712223',
       'https://cdna.artstation.com/p/assets/images/images/065/179/356/large/leon-kaltenschnee-new-project-82.jpg?1689712570',
-      'https://cdna.artstation.com/p/assets/images/images/065/171/716/large/leon-kaltenschnee-render-008.jpg?1689699403'
+      'https://cdna.artstation.com/p/assets/images/images/065/171/716/large/leon-kaltenschnee-render-008.jpg?1689699403',
+      // Added carousel images
+      'https://images.unsplash.com/photo-1637246344338-2afcfb02e766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNjdWxwdHVyZXxlbnwxfHx8fDE3NjEzNTcwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1646936190308-6faef1ac893c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwYXJ0fGVufDF8fHx8MTc2MTQwODA1M3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1688486134221-dfa7d4c45073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxnZW9tZXRyaWMlMjBkZXNpZ258ZW58MXx8fHwxNzYxNDA1NjE4fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFic3RyYWN0JTIwc2hhcGVzfGVuMHwxfHx8fDE3NjE0NTY3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHwzRCUyMGdlb21ldHJpYyUyMGFydHxlbnwxfHx8fDE3NjE0NTY3ODd8MA&ixlib=rb-4.1.0&q=80&w=1080'
     ],
     technologies: ['Blender', 'Substance Painter', 'Unreal Engine', 'ZBrush'],
     show3DModel: true,
