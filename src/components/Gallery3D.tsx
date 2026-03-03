@@ -18,10 +18,10 @@ export const galleryProjects = [
     subtitle: 'Contemporary Art',
   },
   {
-    id: 'geometric-vision',
-    url: 'https://images.unsplash.com/photo-1688486134221-dfa7d4c45073?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnZW9tZXRyaWMlMjBkZXNpZ258ZW58MXx8fHwxNzYxNDA1NjE4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    title: 'Geometric Vision',
-    subtitle: 'Precision Design',
+    id: 'london-street-ue5',
+    url: 'https://cdna.artstation.com/p/assets/images/images/096/655/378/large/leon-kaltenschnee-highresscreenshot00001-1.webp?1771957329',
+    title: 'London Street (UE5.1)',
+    subtitle: 'Realtime Environment / Lighting',
   },
   {
     id: 'organic-flow',
