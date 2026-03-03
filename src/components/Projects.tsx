@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
-import { HoverCard } from './HoverCard';
+import { ProjectDetail } from './ProjectDetail';
 import { galleryProjects } from './Gallery3D';
+import { HoverCard } from './HoverCard';
 import TurntableModel from './TurntableModel';
 
-// ⭐ Alle Projekt-Details
+// ⭐ Projekt-Details
 const projectDetails = [
   {
     id: 'abstract-forms',
@@ -13,51 +14,12 @@ const projectDetails = [
     date: 'September 2024',
     description:
       'A series of abstract 3D sculptures that explore the relationship between organic and geometric forms, pushing the boundaries of digital materiality.',
+    images: [
+      'https://images.unsplash.com/photo-1637246344338-2afcfb02e766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      'https://images.unsplash.com/photo-1710858775474-08799a698bbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      'https://images.unsplash.com/photo-1759265685207-4f3ca08233b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+    ],
     technologies: ['Cinema 4D', 'Octane Render', 'Houdini', 'Photoshop'],
-    show3DModel: false,
-  },
-  {
-    id: 'minimal-aesthetics',
-    title: 'Minimal Aesthetics',
-    subtitle: 'Contemporary Art',
-    category: '3D Design',
-    date: 'August 2024',
-    description:
-      "A minimalist approach to 3D design, focusing on clean lines, subtle gradients, and the beauty of simplicity in digital space.",
-    technologies: ['Blender', 'Arnold Renderer', 'Illustrator', 'Figma'],
-    show3DModel: true,
-  },
-  {
-    id: 'geometric-vision',
-    title: 'Geometric Vision',
-    subtitle: 'Precision Design',
-    category: '3D Design',
-    date: 'July 2024',
-    description:
-      'Exploring the intersection of mathematics and art through precise geometric compositions that create visual harmony and intrigue.',
-    technologies: ['Grasshopper', 'Rhino 3D', 'V-Ray', 'Processing'],
-    show3DModel: true,
-  },
-  {
-    id: 'organic-flow',
-    title: 'Organic Flow',
-    subtitle: 'Fluid Dynamics',
-    category: '3D Design',
-    date: 'June 2024',
-    description:
-      'A study in fluid simulation and organic forms, exploring the natural movement and evolution of shapes in digital space.',
-    technologies: ['Houdini', 'Redshift', 'Cinema 4D', 'X-Particles'],
-    show3DModel: false,
-  },
-  {
-    id: 'crystalline-structure',
-    title: 'Crystalline Structure',
-    subtitle: 'Mathematical Beauty',
-    category: '3D Design',
-    date: 'May 2024',
-    description:
-      'Inspired by natural crystal formations, this project explores the intersection of mathematical precision and organic growth patterns.',
-    technologies: ['Houdini', 'Mantra', 'ZBrush', 'Substance Designer'],
     show3DModel: false,
   },
   {
@@ -67,10 +29,18 @@ const projectDetails = [
     category: 'Digital 3D',
     date: 'July 2023',
     description:
-      "As part of my Bachelor's project, titled 'Modern London Street,' I had the exciting opportunity to create a contemporary London street in a 3D environment. During the implementation, I incorporated the famous red London telephone booth.",
+      "As part of my Bachelor's project, titled 'Modern London Street,' I created a contemporary London street including the iconic red London telephone booth.",
+    images: [
+      'https://cdnb.artstation.com/p/assets/images/images/065/171/711/large/leon-kaltenschnee-render-005.jpg?1689699385',
+      'https://cdnb.artstation.com/p/assets/images/images/065/179/277/large/leon-kaltenschnee-render.jpg?1689712390',
+      'https://cdnb.artstation.com/p/assets/images/images/065/179/213/large/leon-kaltenschnee-new-project-81.jpg?1689712223',
+      'https://cdna.artstation.com/p/assets/images/images/065/179/356/large/leon-kaltenschnee-new-project-82.jpg?1689712570',
+      'https://cdna.artstation.com/p/assets/images/images/065/171/716/large/leon-kaltenschnee-render-008.jpg?1689699403',
+    ],
     technologies: ['Blender', 'Substance Painter', 'Unreal Engine', 'ZBrush'],
-    show3DModel: true,
+    show3DModel: true, // Nur für das zweite Fenster
   },
+  // Weitere Projekte analog…
 ];
 
 export function Projects() {
@@ -136,27 +106,14 @@ export function Projects() {
 
         {/* Project Details */}
         {projectDetails.map((project) => (
-          <article key={project.id} id={project.id} className="w-full flex flex-col gap-8 mb-20">
-            {/* 3D Turntable */}
-            {project.show3DModel && (
-              <div className="w-full h-[80vh] md:h-[90vh]">
+          <ProjectDetail key={project.id} {...project}>
+            {/* Nur für London Telephone Box: zweites 3D-Fenster */}
+            {project.id === 'london-telephone-box' && (
+              <div className="w-full h-[90vh] md:h-[100vh] border border-zinc-700 rounded-xl overflow-hidden mt-8">
                 <TurntableModel />
               </div>
             )}
-
-            {/* Text */}
-            <div className="px-4 md:px-0 max-w-5xl mx-auto flex flex-col gap-4">
-              <h2 className="text-3xl font-bold">{project.title}</h2>
-              <p className="text-white/70">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {project.technologies.map((tech) => (
-                  <span key={tech} className="px-3 py-1 bg-zinc-900 rounded-full text-sm">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </article>
+          </ProjectDetail>
         ))}
       </div>
     </section>
