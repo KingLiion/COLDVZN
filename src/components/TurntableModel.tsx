@@ -20,7 +20,6 @@ function Model() {
 
     const box = new THREE.Box3().setFromObject(ref.current);
     const center = box.getCenter(new THREE.Vector3());
-
     ref.current.position.sub(center);
   }, []);
 
@@ -29,8 +28,9 @@ function Model() {
 
 export default function TurntableModel() {
   return (
-    <div className="w-full h-[70vh] md:h-[80vh] flex justify-center items-center relative cursor-grab active:cursor-grabbing">
-      <Canvas className="w-full h-full"
+    <div className="w-full h-[70vh] md:h-[80vh] relative cursor-grab active:cursor-grabbing flex justify-center items-stretch">
+      <Canvas
+        style={{ width: '100%', height: '100%' }}
         gl={{ alpha: true, antialias: true }}
         camera={{ position: [0, 2, 6], fov: 35 }}
       >
