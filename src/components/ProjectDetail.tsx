@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { ArrowLeft, Calendar, Tag, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Model3D } from './Model3D';
+import TurntableModel from './TurntableModel';
 import { useState, useEffect } from 'react';
 
 interface ProjectDetailProps {
@@ -33,11 +34,11 @@ export function ProjectDetail({
   show3DModel = false,
 }: ProjectDetailProps) {
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
-  
+
   // Auto-wechseln der Galerie alle 4 Sekunden
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentGalleryIndex((prev) => (prev + 1) % Math.min(images.length, 4));
+      setCurrentGalleryIndex((prev) => (prev + 1) % Math.min(images.length, 3));
     }, 4000);
     return () => clearInterval(interval);
   }, [images.length]);
@@ -47,18 +48,18 @@ export function ProjectDetail({
   };
 
   const handlePrevGallery = () => {
-    setCurrentGalleryIndex((prev) => (prev - 1 + Math.min(images.length, 4)) % Math.min(images.length, 4));
+    setCurrentGalleryIndex((prev) => (prev - 1 + Math.min(images.length, 3)) % Math.min(images.length, 3));
   };
 
   const handleNextGallery = () => {
-    setCurrentGalleryIndex((prev) => (prev + 1) % Math.min(images.length, 4));
+    setCurrentGalleryIndex((prev) => (prev + 1) % Math.min(images.length, 3));
   };
 
-  // Bilder für die Galerie (max 4)
-  const galleryImages = images.slice(0, 4);
-  
-  // Horizontale Bilder im Content (ab Bild 4)
-  const horizontalImages = images.slice(4);
+  // Bilder für die Galerie (max 3)
+  const galleryImages = images.slice(0, 3);
+
+  // Alle Bilder im Content anzeigen (einschließlich derer aus der Galerie)
+  const contentImages = images;
 
   return (
     <div id={id} className="relative min-h-screen bg-black py-24 md:py-32 px-4 md:px-6 scroll-mt-20">
@@ -122,7 +123,7 @@ export function ProjectDetail({
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               />
-              
+
               {/* Overlay mit Buttons */}
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {/* Previous Button */}
@@ -149,11 +150,10 @@ export function ProjectDetail({
                 <button
                   key={index}
                   onClick={() => setCurrentGalleryIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentGalleryIndex 
-                      ? 'bg-ice-400 w-8' 
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all ${index === currentGalleryIndex
+                    ? 'bg-ice-400 w-8'
+                    : 'bg-white/30 hover:bg-white/50'
+                    }`}
                 />
               ))}
             </div>
@@ -170,7 +170,7 @@ export function ProjectDetail({
           >
             <div className="relative bg-gradient-to-br from-zinc-900 to-black border border-white/10" style={{ minHeight: '600px' }}>
               <div className="absolute inset-0 bg-gradient-to-tr from-ice-400/10 via-transparent to-ice-400/5 z-10 pointer-events-none" />
-              <Model3D />
+              {id === 'london-telephone-box' ? <TurntableModel /> : <Model3D />}
             </div>
           </motion.div>
         )}
@@ -231,26 +231,27 @@ export function ProjectDetail({
         </motion.div>
 
         {/* Horizontale Bilder im Content */}
-        {horizontalImages.length > 0 && (
+        {contentImages.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-16 space-y-8"
           >
-            {horizontalImages.map((img, index) => (
+            <h3 className="text-white mb-4">Project Gallery</h3>
+            {contentImages.map((img, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="rounded-2xl overflow-hidden"
+                className="rounded-2xl overflow-hidden border border-white/10"
               >
                 <img
                   src={img}
                   alt={`${title} - Detail ${index + 1}`}
-                  className="w-full aspect-video object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full aspect-video object-cover hover:scale-105 transition-transform duration-700"
                 />
               </motion.div>
             ))}

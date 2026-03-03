@@ -162,7 +162,7 @@ const projectDetails = [
       'https://cdna.artstation.com/p/assets/images/images/065/171/716/large/leon-kaltenschnee-render-008.jpg?1689699403'
     ],
     technologies: ['Blender', 'Substance Painter', 'Unreal Engine', 'ZBrush'],
-    show3DModel: false,
+    show3DModel: true,
   },
 ];
 
