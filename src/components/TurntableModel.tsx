@@ -29,7 +29,7 @@ function Model() {
 
 export default function TurntableModel() {
   return (
-    <div className="w-full h-[500px] md:h-[600px] cursor-grab active:cursor-grabbing">
+    <div className="w-full h-[70vh] md:h-[80vh] relative">
       <Canvas
         gl={{ alpha: true, antialias: true }}
         camera={{ position: [0, 2, 6], fov: 35 }}
