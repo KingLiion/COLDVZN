@@ -1,48 +1,58 @@
 import { Canvas, useFrame } from '@react-three/fiber';
-import { useGLTF, OrbitControls, Stage } from '@react-three/drei';
-import { Suspense, useRef } from 'react';
+import { useGLTF, OrbitControls } from '@react-three/drei';
+import { Suspense, useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 function Model() {
-    const { scene } = useGLTF('/assets/Telefonzelle.glb');
-    const modelRef = useRef<THREE.Group>(null);
+  const { scene } = useGLTF('/assets/Telefonzelle.glb');
+  const ref = useRef<THREE.Group>(null);
 
-    useFrame((state) => {
-        if (modelRef.current) {
-            modelRef.current.rotation.y += 0.005;
-        }
-    });
+  // sanfte Turntable-Rotation
+  useFrame(() => {
+    if (ref.current) {
+      ref.current.rotation.y += 0.004;
+    }
+  });
 
-    return <primitive ref={modelRef} object={scene} scale={1.5} position={[0, -1, 0]} />;
+  // Modell automatisch zentrieren (Bounding Box)
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const box = new THREE.Box3().setFromObject(ref.current);
+    const center = box.getCenter(new THREE.Vector3());
+
+    ref.current.position.sub(center);
+  }, []);
+
+  return <primitive ref={ref} object={scene} scale={1.4} />;
 }
 
 export default function TurntableModel() {
-    return (
-        <div className="w-full h-[500px] md:h-[600px] cursor-grab active:cursor-grabbing">
-            <Canvas gl={{ alpha: true, antialias: true }} camera={{ position: [0, 1.5, 4], fov: 40 }}>
-                {/* 3-Point Lighting Setup */}
-                {/* 1. Key Light: Main light source */}
-                <directionalLight position={[5, 5, 5]} intensity={1.5} color="#ffffff" />
+  return (
+    <div className="w-full h-[500px] md:h-[600px] cursor-grab active:cursor-grabbing">
+      <Canvas
+        gl={{ alpha: true, antialias: true }}
+        camera={{ position: [0, 2, 6], fov: 35 }}
+      >
+        {/* Lights */}
+        <ambientLight intensity={0.4} />
+        <directionalLight position={[5, 5, 5]} intensity={1.3} />
+        <directionalLight position={[-5, 3, 2]} intensity={0.5} />
+        <directionalLight position={[0, 5, -5]} intensity={0.8} />
 
-                {/* 2. Fill Light: Soften shadows */}
-                <directionalLight position={[-5, 2, 2]} intensity={0.5} color="#cbd5e1" />
+        <Suspense fallback={null}>
+          <Model />
+        </Suspense>
 
-                {/* 3. Rim Light: Backlighting to separate from background */}
-                <directionalLight position={[0, 5, -5]} intensity={0.8} color="#38bdf8" />
-
-                {/* Ambient Light for general visibility */}
-                <ambientLight intensity={0.4} />
-
-                <Suspense fallback={null}>
-                    <Model />
-                </Suspense>
-                <OrbitControls
-                    enableZoom={true}
-                    enablePan={false}
-                    minPolarAngle={Math.PI / 4}
-                    maxPolarAngle={Math.PI / 1.5}
-                />
-            </Canvas>
-        </div>
-    );
+        <OrbitControls
+          enableZoom
+          enablePan={false}
+          minDistance={4}
+          maxDistance={8}
+          minPolarAngle={Math.PI / 3}
+          maxPolarAngle={Math.PI / 1.5}
+        />
+      </Canvas>
+    </div>
+  );
 }
