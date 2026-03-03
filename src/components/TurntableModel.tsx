@@ -29,8 +29,8 @@ function Model() {
 
 export default function TurntableModel() {
   return (
-    <div className="w-full h-[70vh] md:h-[80vh] relative">
-      <Canvas
+    <div className="w-full h-[70vh] md:h-[80vh] flex justify-center items-center relative cursor-grab active:cursor-grabbing">
+      <Canvas className="w-full h-full"
         gl={{ alpha: true, antialias: true }}
         camera={{ position: [0, 2, 6], fov: 35 }}
       >
