@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 import { ProjectDetail } from './ProjectDetail';
 import { galleryProjects } from './Gallery3D';
 import { HoverCard } from './HoverCard';
-import TurntableModel from './TurntableModel';
+import TurntableModel from './TurntableModel'; // Dein 3D-Modell-Fenster
 
-// ⭐ Projekt-Details
+// ⭐ PROJEKT-DETAILS
 const projectDetails = [
   {
     id: 'abstract-forms',
@@ -12,12 +12,9 @@ const projectDetails = [
     subtitle: 'Modern Design',
     category: '3D Design',
     date: 'September 2024',
-    description:
-      'A series of abstract 3D sculptures that explore the relationship between organic and geometric forms, pushing the boundaries of digital materiality.',
-    challenge:
-      'Creating a cohesive series that balances abstraction with visual appeal while maintaining a consistent aesthetic language across multiple pieces. The challenge was to make each piece unique yet part of a unified collection.',
-    solution:
-      'I developed a custom procedural workflow that allowed for controlled randomness in form generation. By establishing a core set of design principles and material properties, each piece maintains visual coherence while expressing individual character. The interplay of matte and glossy surfaces creates visual interest and depth.',
+    description: 'A series of abstract 3D sculptures that explore the relationship between organic and geometric forms, pushing the boundaries of digital materiality.',
+    challenge: 'Creating a cohesive series that balances abstraction with visual appeal while maintaining a consistent aesthetic language across multiple pieces. The challenge was to make each piece unique yet part of a unified collection.',
+    solution: 'I developed a custom procedural workflow that allowed for controlled randomness in form generation. By establishing a core set of design principles and material properties, each piece maintains visual coherence while expressing individual character. The interplay of matte and glossy surfaces creates visual interest and depth.',
     results: [
       'Complete series sold to private collector',
       'Published in 3D Artist Magazine',
@@ -25,9 +22,9 @@ const projectDetails = [
       'Generated licensing inquiries from multiple brands',
     ],
     images: [
-      'https://images.unsplash.com/photo-1637246344338-2afcfb02e766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      'https://images.unsplash.com/photo-1710858775474-08799a698bbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      'https://images.unsplash.com/photo-1759265685207-4f3ca08233b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      'https://images.unsplash.com/photo-1637246344338-2afcfb02e766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNjdWxwdHVyZXxlbnwxfHx8fDE3NjEzNTcwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1710858775474-08799a698bbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFic3RyYWN0JTIwYXJ0fGVufDF8fHx8MTc2MTQwNzY4MXww&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1759265685207-4f3ca08233b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxkaWdpdGFsJTIwYXJ0JTIwY29uY2VwdHxlbnwxfHx8fDE3NjEzMjQyODZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
     ],
     technologies: ['Cinema 4D', 'Octane Render', 'Houdini', 'Photoshop'],
   },
@@ -37,26 +34,22 @@ const projectDetails = [
     subtitle: 'Contemporary Art',
     category: '3D Design',
     date: 'August 2024',
-    description:
-      'A minimalist approach to 3D design, focusing on clean lines, subtle gradients, and the beauty of simplicity in digital space.',
-    challenge:
-      'In an era of visual complexity, the challenge was to create compelling work using minimal elements. Every decision needed to be intentional, as there was nowhere to hide imperfections in such a stripped-down aesthetic.',
-    solution:
-      "By focusing on perfect lighting, subtle material variations, and precise composition, I created a series that proves less can indeed be more. The key was understanding that minimalism doesn't mean simple - it means refined. Every shadow, reflection, and edge was carefully considered.",
+    description: 'A minimalist approach to 3D design, focusing on clean lines, subtle gradients, and the beauty of simplicity in digital space.',
+    challenge: 'In an era of visual complexity, the challenge was to create compelling work using minimal elements. Every decision needed to be intentional, as there was nowhere to hide imperfections in such a stripped-down aesthetic.',
+    solution: 'By focusing on perfect lighting, subtle material variations, and precise composition, I created a series that proves less can indeed be more. The key was understanding that minimalism doesn\'t mean simple - it means refined. Every shadow, reflection, and edge was carefully considered.',
     results: [
       'Won Best Minimal Design Award at Digital Arts Festival',
-      "Featured on Behance's curated gallery",
+      'Featured on Behance\'s curated gallery',
       'Commissioned for luxury brand campaign',
       'Tutorial requests from over 200 designers',
     ],
     images: [
-      'https://images.unsplash.com/photo-1646936190308-6faef1ac893c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      'https://images.unsplash.com/photo-1675350174784-e76296667d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      'https://images.unsplash.com/photo-1722880805722-d212c7630855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
+      'https://images.unsplash.com/photo-1646936190308-6faef1ac893c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwYXJ0fGVufDF8fHx8MTc2MTQwODA1M3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1675350174784-e76296667d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtb2Rlcm4lMjBhcmJiZWN0dXJlJTIwZGVzaWdufGVufDF8fHx8MTc2MTMzOTMyN3ww&ixlib=rb-4.1.0&q=80&w=1080',
+      'https://images.unsplash.com/photo-1722880805722-d212c7630855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxncmFwaGljJTIwZGVzaWduJTIwd29ya3xlbnwxfHx8fDE3NjE0MDIyODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
     ],
     technologies: ['Blender', 'Arnold Renderer', 'Illustrator', 'Figma'],
-    show3DModel: true,
-  },
+  },,
   {
     id: 'geometric-vision',
     title: 'Geometric Vision',
@@ -139,12 +132,9 @@ const projectDetails = [
     subtitle: 'Game Assets / Props',
     category: 'Digital 3D',
     date: 'July 2023',
-    description:
-      "As part of my Bachelor's project, titled 'Modern London Street,' I created a contemporary London street including the iconic red London telephone booth.",
-    challenge:
-      'Capturing the essence of modern London by meticulously designing the street with attention to detail.',
-    solution:
-      'Faithfully recreating the iconic telephone booth with high-quality texturing and modeling to match real-world references.',
+    description: 'As part of my Bachelor\'s project, titled "Modern London Street," I had the exciting opportunity to create a contemporary London street in a 3D environment. During the implementation, I incorporated the famous red London telephone booth. These telephone booths have become an iconic symbol of the British capital, representing the charm and history of the city.',
+    challenge: 'In my project, I strived to capture the essence of modern London by meticulously designing the street with attention to detail. The inclusion of the red telephone booth was essential in conveying the character and ambiance of the cityscape.',
+    solution: 'By faithfully recreating this iconic element, I aimed to pay homage to its significance in the cultural fabric of London, utilizing high-quality texturing and precise modeling techniques to match real-world references.',
     results: [
       'Featured on ArtStation',
       'Realistic Game Asset Creation',
@@ -158,78 +148,87 @@ const projectDetails = [
       'https://cdna.artstation.com/p/assets/images/images/065/171/716/large/leon-kaltenschnee-render-008.jpg?1689699403',
     ],
     technologies: ['Blender', 'Substance Painter', 'Unreal Engine', 'ZBrush'],
-    extra3DComponent: (
-      <div className="w-full h-[90vh] md:h-[100vh] border border-zinc-700 rounded-xl overflow-hidden mt-8">
-        <TurntableModel />
-      </div>
-    ),
+    show3DModel: true,
+    extra3DComponent: <TurntableModel />, // <-- nur hier das 3D-Fenster
   },
 ];
 
 export function Projects() {
   const handleProjectClick = (projectId: string) => {
     const element = document.getElementById(projectId);
-    if (element) element.scrollIntoView({ behavior: 'smooth' });
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
-    <section id="3d-projects" className="relative bg-black text-white">
-      <div className="py-20 px-6 max-w-7xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2
-            className="mb-4 bg-gradient-to-r from-ice-200 via-ice-400 to-ice-200 bg-clip-text text-transparent"
-            style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}
-          >
-            3D Projects
-          </h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
-            Featured case studies of my 3D design work
-          </p>
-        </motion.div>
-
-        {/* Featured Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-24">
-          {galleryProjects.map((project, index) => (
-            <HoverCard key={project.id} onClick={() => handleProjectClick(project.id)}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className="group rounded-3xl overflow-hidden bg-gradient-to-br from-zinc-900 to-zinc-950 shadow-2xl"
+    <section id="3d-projects" className="relative bg-black">
+      <div className="relative">
+        <div className="py-20 px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2
+                className="mb-4 bg-gradient-to-r from-ice-200 via-ice-400 to-ice-200 bg-clip-text text-transparent"
+                style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}
               >
-                <div className="relative aspect-video overflow-hidden">
-                  <img
-                    src={project.url}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-300" />
-                  <div className="absolute inset-0 bg-ice-400/0 group-hover:bg-ice-400/10 transition-colors duration-300" />
-                </div>
+                3D Projects
+              </h2>
+              <p className="text-white/70 max-w-2xl mx-auto">
+                Featured case studies of my 3D design work
+              </p>
+            </motion.div>
 
-                <div className="p-6">
-                  <p className="text-white/60 mb-1 text-sm">{project.subtitle}</p>
-                  <h3 className="text-white mb-3 group-hover:text-ice-400 transition-colors">{project.title}</h3>
-                  <div className="flex items-center gap-2 text-white/60 group-hover:text-ice-400 transition-colors">
-                    <span className="text-sm">View Case Study</span>
-                  </div>
-                </div>
-              </motion.div>
-            </HoverCard>
-          ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-24">
+              {galleryProjects.map((project, index) => (
+                <HoverCard
+                  key={project.id}
+                  onClick={() => handleProjectClick(project.id)}
+                  className="cursor-pointer"
+                >
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.15 }}
+                    className="group rounded-3xl overflow-hidden bg-gradient-to-br from-zinc-900 to-zinc-950 shadow-2xl"
+                  >
+                    <div className="relative aspect-video overflow-hidden">
+                      <img
+                        src={project.url}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-70 group-hover:opacity-50 transition-opacity duration-300" />
+                      <div className="absolute inset-0 bg-ice-400/0 group-hover:bg-ice-400/10 transition-colors duration-300" />
+                    </div>
+
+                    <div className="p-6">
+                      <p className="text-white/60 mb-1 text-sm">
+                        {project.subtitle}
+                      </p>
+                      <h3 className="text-white mb-3 group-hover:text-ice-400 transition-colors">
+                        {project.title}
+                      </h3>
+                      <div className="flex items-center gap-2 text-white/60 group-hover:text-ice-400 transition-colors">
+                        <span className="text-sm">View Case Study</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                </HoverCard>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Project Details */}
         {projectDetails.map((project) => (
-          <ProjectDetail key={project.id} {...project} extra3DComponent={project.extra3DComponent} />
+          <ProjectDetail key={project.id} {...project} />
         ))}
       </div>
     </section>
