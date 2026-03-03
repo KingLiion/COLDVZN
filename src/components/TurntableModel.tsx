@@ -7,23 +7,25 @@ function Model() {
   const { scene } = useGLTF('/assets/Telefonzelle.glb');
   const ref = useRef<THREE.Group>(null);
 
-  // sanfte Turntable-Rotation
   useFrame(() => {
-    if (ref.current) {
-      ref.current.rotation.y += 0.004;
-    }
+    if (ref.current) ref.current.rotation.y += 0.004;
   });
 
-  // Modell automatisch zentrieren (Bounding Box)
   useEffect(() => {
     if (!ref.current) return;
 
     const box = new THREE.Box3().setFromObject(ref.current);
     const center = box.getCenter(new THREE.Vector3());
     ref.current.position.sub(center);
+
+    // dynamische Skalierung
+    const size = box.getSize(new THREE.Vector3());
+    const maxAxis = Math.max(size.x, size.y, size.z);
+    const scale = 3 / maxAxis; // Modell passt auf ca. 3 units Höhe
+    ref.current.scale.setScalar(scale);
   }, []);
 
-  return <primitive ref={ref} object={scene} scale={1.4} />;
+  return <primitive ref={ref} object={scene} />;
 }
 
 export default function TurntableModel() {
@@ -32,9 +34,8 @@ export default function TurntableModel() {
       <Canvas
         style={{ width: '100%', height: '100%' }}
         gl={{ alpha: true, antialias: true }}
-        camera={{ position: [0, 2, 6], fov: 35 }}
+        camera={{ position: [0, 1.5, 4], fov: 35 }}
       >
-        {/* Lights */}
         <ambientLight intensity={0.4} />
         <directionalLight position={[5, 5, 5]} intensity={1.3} />
         <directionalLight position={[-5, 3, 2]} intensity={0.5} />
@@ -47,10 +48,10 @@ export default function TurntableModel() {
         <OrbitControls
           enableZoom
           enablePan={false}
-          minDistance={4}
+          minDistance={2}
           maxDistance={8}
-          minPolarAngle={Math.PI / 3}
-          maxPolarAngle={Math.PI / 1.5}
+          minPolarAngle={0}
+          maxPolarAngle={Math.PI}
         />
       </Canvas>
     </div>
