@@ -20,7 +20,7 @@ export function ProjectCard({ title, category, image, index }: ProjectCardProps)
       whileHover={{ scale: 1.03, y: -8 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-zinc-900 to-zinc-950 shadow-2xl cursor-pointer"
+      className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-zinc-900 to-zinc-950 shadow-2xl cursor-pointer electric-border"
     >
       {/* Image */}
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -42,12 +42,9 @@ export function ProjectCard({ title, category, image, index }: ProjectCardProps)
             {category}
           </span>
         </div>
-        <h3 className="text-white mb-2 group-hover:text-ice-400 transition-colors duration-300">
+        <h3 className="text-white group-hover:text-ice-400 transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-white/60">
-          Explore this project
-        </p>
       </div>
 
       {/* Leuchtender Rand mit fahrendem Highlight */}

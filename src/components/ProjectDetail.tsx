@@ -113,12 +113,12 @@ export function ProjectDetail({
             className="mb-16 relative rounded-3xl overflow-hidden group"
           >
             {/* Hauptbild der Galerie */}
-            <div className="relative aspect-video bg-zinc-900">
+            <div className="relative bg-zinc-900 rounded-3xl overflow-hidden" style={{ maxWidth: '100%' }}>
               <motion.img
                 key={currentGalleryIndex}
                 src={galleryImages[currentGalleryIndex]}
                 alt={`${title} - Gallery ${currentGalleryIndex + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -251,7 +251,7 @@ export function ProjectDetail({
                 <img
                   src={img}
                   alt={`${title} - Detail ${index + 1}`}
-                  className="w-full aspect-video object-cover hover:scale-105 transition-transform duration-700"
+                  className="w-full h-auto object-contain hover:scale-105 transition-transform duration-700"
                 />
               </motion.div>
             ))}

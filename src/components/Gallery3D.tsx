@@ -1,9 +1,11 @@
 import { motion } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { HoverCard } from './HoverCard';
+import { graphicDesignProjects } from './GraphicDesign';
 
-// ⭐ HIER KANNST DU DEINE EIGENEN BILDER EINFÜGEN
-export const galleryProjects = [
+// ⭐ HIER KANNST DU DEINE EIGENEN 3D-BILDER EINFÜGEN
+// (das Array ist nach wie vor ALLES 3D-Projekte enthält)
+export const gallery3DProjects = [
 
   {
     id: 'abstract-forms',
@@ -41,6 +43,30 @@ export const galleryProjects = [
     title: 'London Telephone Box',
     subtitle: 'Game Assets / Props',
   },
+];
+
+// Die exportierte `galleryProjects`-Liste enthält jetzt sowohl 3D- als auch
+// Graphic-Design-Projekte. Sie wird z.B. in Hero/Home verwendet, um alle
+// Featured-Projekte anzuzeigen. Für die reine 3D-Übersicht (in
+// `Projects.tsx`) kann weiterhin `gallery3DProjects` importiert werden.
+
+// Auswahl festlegen: vier 3D‑Projekte, davon zwei explizit genannt, plus
+// zwei Grafikdesign‑Einträge.
+const featured3DIds = [
+  'london-telephone-box',
+  'london-street-ue5',
+  'abstract-forms',
+  'minimal-aesthetics',
+];
+const featuredGraphicIds = graphicDesignProjects.slice(0, 2).map((p) => p.id);
+
+export const galleryProjects = [
+  // zuerst 3D-Auswahl
+  ...gallery3DProjects.filter((p) => featured3DIds.includes(p.id)),
+  // dann Grafikdesign (umformatiert)
+  ...graphicDesignProjects
+    .filter((p) => featuredGraphicIds.includes(p.id))
+    .map((p) => ({ id: p.id, url: p.image, title: p.title, subtitle: p.subtitle })),
 ];
 
 export function Gallery3D() {
@@ -149,7 +175,7 @@ export function Gallery3D() {
                 onClick={() => position === 0 && handleCardClick(project.id)}
               >
                 <div
-                  className="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden group"
+                  className="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden group electric-border"
                   style={{
                     boxShadow: `
                       0 25px 50px -12px rgba(0, 0, 0, 0.7),

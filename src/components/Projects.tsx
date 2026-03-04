@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ProjectDetail } from './ProjectDetail';
-import { galleryProjects } from './Gallery3D';
+import { gallery3DProjects } from './Gallery3D';
 import { HoverCard } from './HoverCard';
 import TurntableModel from './TurntableModel'; // Dein 3D-Modell-Fenster
 
@@ -49,7 +49,7 @@ const projectDetails = [
       'https://images.unsplash.com/photo-1722880805722-d212c7630855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxncmFwaGljJTIwZGVzaWduJTIwd29ya3xlbnwxfHx8fDE3NjE0MDIyODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
     ],
     technologies: ['Blender', 'Arnold Renderer', 'Illustrator', 'Figma'],
-  },,
+  },
   {
     id: 'london-street-ue5',
     title: 'Atmospheric Realtime Environment - London Street (UE5.1)',
@@ -189,7 +189,7 @@ export function Projects() {
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-24">
-              {galleryProjects.map((project, index) => (
+              {gallery3DProjects.map((project, index) => (
                 <HoverCard
                   key={project.id}
                   onClick={() => handleProjectClick(project.id)}
@@ -216,12 +216,9 @@ export function Projects() {
                       <p className="text-white/60 mb-1 text-sm">
                         {project.subtitle}
                       </p>
-                      <h3 className="text-white mb-3 group-hover:text-ice-400 transition-colors">
+                      <h3 className="text-white group-hover:text-ice-400 transition-colors">
                         {project.title}
                       </h3>
-                      <div className="flex items-center gap-2 text-white/60 group-hover:text-ice-400 transition-colors">
-                        <span className="text-sm">View Case Study</span>
-                      </div>
                     </div>
                   </motion.div>
                 </HoverCard>

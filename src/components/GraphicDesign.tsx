@@ -1,8 +1,9 @@
 import { motion } from 'motion/react';
 import { HoverCard } from './HoverCard';
 import { ExternalLink } from 'lucide-react';
+import { ProjectDetail } from './ProjectDetail';
 
-const graphicDesignProjects = [
+export const graphicDesignProjects = [
   {
     id: 'urban-beats',
     title: 'Urban Beats Festival',
@@ -11,11 +12,38 @@ const graphicDesignProjects = [
     image: 'https://images.unsplash.com/photo-1621974714993-465ae51a4483?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFwaGljJTIwZGVzaWduJTIwcG9zdGVyfGVufDF8fHx8MTc2MTU1MTMxOHww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
-    id: 'zenith-coffee',
-    title: 'Zenith Coffee Co.',
-    subtitle: 'Complete Brand Redesign',
-    category: 'Brand Identity',
-    image: 'https://images.unsplash.com/photo-1633533447057-56ccf997f4fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicmFuZCUyMGlkZW50aXR5JTIwZGVzaWdufGVufDF8fHx8MTc2MTU0NjQzMHww&ixlib=rb-4.1.0&q=80&w=1080',
+    id: 'pfanner-iced-tea',
+    title: 'Pfanner Iced Tea – Blueberry',
+    subtitle: 'Packaging Design | Competition Concept',
+    category: 'Packaging',
+    image: '/assets/PfannerDesign2.3.png',
+    description: `This packaging design draft was created as part of an open design competition by Pfanner. The basis of the project was a predefined template structure consisting of the Pfanner logo, a vertical dividing line, and the basic lettering. These elements formed the design framework within which a free, independent interpretation could be developed.
+
+The goal of my design was to portray the blueberry flavor emotionally and visually powerfully – deliberately detached from the classic core range. The focus was on a strong taste association, dynamism, and a high level of recognizability. Through intense color contrasts, a dense illustrative imagery, and dynamic compositions, freshness, fruitiness, and energy were to be conveyed.
+
+A central concept of the design is the two‑sided logic of the packaging: the design is split in the middle so that each side functions as an independent product view. The two glasses pick up this idea and ensure that each side is perceived as a complete, balanced composition on the shelf.
+
+Visually, the design combines illustrative elements with typographic areas and textures. The background typography is not primarily intended for readability, but serves as a graphic device to reinforce the varietal identity. The result is a visually loud, experimental packaging developed specifically for a competition and concept context.
+
+Strengths of the design
+
+- Independent, illustrative brand interpretation
+- Strong communication of taste and freshness
+- Bold color and imagery with high attention factor
+- Clear conceptual idea through the two‑sided design
+- Conscious handling of predefined brand elements
+
+Tools & implementation
+
+Adobe Illustrator
+Developed vector elements, typography, layout structure, and graphic details
+
+Adobe Photoshop
+Image editing, illustration, color corrections, textures, and compositing
+
+Project context
+
+This project is to be understood as a conceptual competition design. It shows my approach to working with fixed brand guidelines and deliberately interpreting them creatively without losing their function or recognizability.`,
   },
   {
     id: 'eco-tech',
@@ -23,6 +51,79 @@ const graphicDesignProjects = [
     subtitle: 'Sustainable Brand Identity',
     category: 'Branding',
     image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBicmFuZGluZ3xlbnwxfHx8fDE3NjE1NjAzNTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+  },
+];
+
+// detailed descriptions used below for the full-page layout
+const graphicDesignDetails = [
+  {
+    id: 'urban-beats',
+    title: 'Urban Beats Festival',
+    subtitle: 'Brand Identity & Campaign',
+    category: 'Branding',
+    date: 'July 2023',
+    description: 'A comprehensive visual identity created for a fictional music festival, combining gritty urban typography with colorful abstract shapes to capture the energy of electronic and hip‑hop acts.',
+    challenge: 'Creating a brand that felt both underground and accessible to a wide audience.',
+    solution: 'Developed a modular logo and pattern system that could be applied across posters, merch and digital assets with a consistent attitude.',
+    results: ['Used in hypothetical promotional campaign', 'Positive peer feedback'],
+    images: [
+      'https://images.unsplash.com/photo-1621974714993-465ae51a4483?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmFwaGljJTIwZGVzaWduJTIwcG9zdGVyfGVufDF8fHx8MTc2MTU1MTMxOHww&ixlib=rb-4.1.0&q=80&w=1080',
+    ],
+    technologies: ['Illustrator', 'Photoshop'],
+  },
+  {
+    id: 'pfanner-iced-tea',
+    title: 'Pfanner Iced Tea – Blueberry',
+    subtitle: 'Packaging Design | Competition Concept',
+    category: 'Packaging',
+    date: 'September 2024',
+    description: `This packaging design draft was created as part of an open design competition by Pfanner. The basis of the project was a predefined template structure consisting of the Pfanner logo, a vertical dividing line, and the basic lettering. These elements formed the design framework within which a free, independent interpretation could be developed.
+
+The goal of my design was to portray the blueberry flavor emotionally and visually powerfully – deliberately detached from the classic core range. The focus was on a strong taste association, dynamism, and a high level of recognizability. Through intense color contrasts, a dense illustrative imagery, and dynamic compositions, freshness, fruitiness, and energy were to be conveyed.
+
+A central concept of the design is the two‑sided logic of the packaging: the design is split in the middle so that each side functions as an independent product view. The two glasses pick up this idea and ensure that each side is perceived as a complete, balanced composition on the shelf.
+
+Visually, the design combines illustrative elements with typographic areas and textures. The background typography is not primarily intended for readability, but serves as a graphic device to reinforce the varietal identity. The result is a visually loud, experimental packaging developed specifically for a competition and concept context.
+
+Strengths of the design
+
+- Independent, illustrative brand interpretation
+- Strong communication of taste and freshness
+- Bold color and imagery with high attention factor
+- Clear conceptual idea through the two‑sided design
+- Conscious handling of predefined brand elements
+
+Tools & implementation
+
+Adobe Illustrator
+Developed vector elements, typography, layout structure, and graphic details
+
+Adobe Photoshop
+Image editing, illustration, color corrections, textures, and compositing
+
+Project context
+
+This project is to be understood as a conceptual competition design. It shows my approach to working with fixed brand guidelines and deliberately interpreting them creatively without losing their function or recognizability.`,
+    challenge: 'Working within strict brand guidelines while still producing something visually distinctive.',
+    solution: 'Exploited the two‑sided template to create a split composition and used bold colors to stand out.',
+    results: ['Entered into competition', 'Positive feedback from peers'],
+    images: ['/assets/PfannerDesign2.3.png'],
+    technologies: ['Illustrator', 'Photoshop'],
+  },
+  {
+    id: 'eco-tech',
+    title: 'EcoTech Solutions',
+    subtitle: 'Sustainable Brand Identity',
+    category: 'Branding',
+    date: 'June 2024',
+    description: 'A branding package for a fictional eco‑technology startup, featuring leaf motifs and a clean sans-serif logotype.',
+    challenge: 'Conveying innovation and sustainability without relying on clichés.',
+    solution: 'Used a muted green palette and abstract geometric forms to suggest both circuitry and foliage.',
+    results: ['Concept designs well received in class'],
+    images: [
+      'https://images.unsplash.com/photo-1626785774573-4b799315345d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBicmFuZGluZ3xlbnwxfHx8fDE3NjE1NjAzNTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    ],
+    technologies: ['Illustrator', 'Figma'],
   },
 ];
 
@@ -63,6 +164,7 @@ export function GraphicDesign() {
               {graphicDesignProjects.map((project, index) => (
                 <HoverCard
                   key={project.id}
+                  id={project.id}
                   onClick={() => handleProjectClick(project.id)}
                   className="cursor-pointer"
                 >
@@ -96,17 +198,19 @@ export function GraphicDesign() {
                       <p className="text-white/60 mb-1 text-sm">
                         {project.subtitle}
                       </p>
-                      <h3 className="text-white mb-3 group-hover:text-ice-400 transition-colors">
+                      <h3 className="text-white group-hover:text-ice-400 transition-colors">
                         {project.title}
                       </h3>
-                      <div className="flex items-center gap-2 text-white/60 group-hover:text-ice-400 transition-colors">
-                        <span className="text-sm">View Case Study</span>
-                      </div>
                     </div>
                   </motion.div>
                 </HoverCard>
               ))}
             </div>
+
+            {/* Details sections mimic 3D Projects layout */}
+            {graphicDesignDetails.map((project) => (
+              <ProjectDetail key={project.id} {...project} />
+            ))}
           </div>
         </div>
       </div>

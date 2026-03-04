@@ -24,7 +24,7 @@ export function HoverCard({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       onClick={onClick}
-      className={`relative ${className}`}
+      className={`relative electric-border ${className}`}
     >
       {children}
 
