@@ -25,6 +25,7 @@ export function HoverCard({
       onHoverEnd={() => setIsHovered(false)}
       onClick={onClick}
       className={`relative electric-border ${className}`}
+      style={{ contain: 'layout' }}
     >
       {children}
 

@@ -27,7 +27,7 @@ export function Snowfall() {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden" style={{ contain: 'layout style paint' }}>
       {snowflakes.map((flake) => (
         <motion.div
           key={flake.id}
@@ -38,6 +38,7 @@ export function Snowfall() {
             height: flake.size,
             opacity: flake.opacity,
             filter: 'blur(0.5px)',
+            willChange: 'transform',
           }}
           animate={{
             y: ['0vh', '100vh'],

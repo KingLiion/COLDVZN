@@ -52,6 +52,19 @@
     build: {
       target: 'esnext',
       outDir: 'build',
+      minify: 'terser',
+      terserOptions: {
+        compress: {
+          drop_console: false,
+        },
+      },
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'motion': ['motion/react'],
+          },
+        },
+      },
     },
     server: {
       port: 3000,

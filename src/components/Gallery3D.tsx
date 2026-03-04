@@ -190,6 +190,8 @@ export function Gallery3D() {
                     style={{
                       transform: position === 0 ? 'scale(1.02)' : 'scale(1)',
                     }}
+                    loading="lazy"
+                    decoding="async"
                   />
 
                   {/* Overlay gradient */}

@@ -207,6 +207,8 @@ html {
 
 .electric-border {
   position: relative;
+  border: 1px solid rgba(30, 200, 255, 0.3);
+  will-change: border-color;
 }
 
 .electric-border::after {
@@ -214,23 +216,16 @@ html {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1px; /* border thickness */
-  /* gradient fill that will be clipped to content-box (i.e. the padding area)
-     so only the 1px border shows */
+  padding: 1px;
   background: linear-gradient(90deg, #1ec8ff, #64d2ff, #1ec8ff);
   background-size: 200% 100%;
   background-clip: content-box;
   animation: move-border 2.5s linear infinite;
   pointer-events: none;
   z-index: 50;
+  will-change: background-position;
 }
 
-/* light static border for non-animated fallback */
-.electric-border {
-  border: 1px solid rgba(30, 200, 255, 0.3);
-}
-
-/* Optionally reduce animation on hover */
 .electric-border:hover::after {
   animation-duration: 1.5s;
 }

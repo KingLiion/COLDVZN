@@ -107,7 +107,7 @@ This project is to be understood as a conceptual competition design. It shows my
     challenge: 'Working within strict brand guidelines while still producing something visually distinctive.',
     solution: 'Exploited the two‑sided template to create a split composition and used bold colors to stand out.',
     results: ['Entered into competition', 'Positive feedback from peers'],
-    images: ['/assets/PfannerDesign2.3.png'],
+    images: ['/assets/PfannerDesign2.3.png', '/assets/icetea-Kamera.png'],
     technologies: ['Illustrator', 'Photoshop'],
   },
   {
@@ -181,6 +181,8 @@ export function GraphicDesign() {
                         src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        loading="lazy"
+                        decoding="async"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
                       <div className="absolute inset-0 bg-ice-400/0 group-hover:bg-ice-400/10 transition-colors duration-500" />
