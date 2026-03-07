@@ -39,10 +39,17 @@ export function Navigation() {
   const scrollToSection = (id: string) => {
     setActiveItem(id);
     setMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    
+    // Use requestAnimationFrame to ensure browser has calculated layout before scrolling
+    requestAnimationFrame(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        // Double requestAnimationFrame to ensure the browser has finished layout calculations
+        requestAnimationFrame(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+    });
   };
 
   // Desktop Navigation
