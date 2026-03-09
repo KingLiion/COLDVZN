@@ -8,10 +8,10 @@ import { graphicDesignProjects } from './GraphicDesign';
 export const gallery3DProjects = [
 
   {
-    id: 'abstract-forms',
-    url: 'https://images.unsplash.com/photo-1637246344338-2afcfb02e766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNjdWxwdHVyZXxlbnwxfHx8fDE3NjEzNTcwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    title: 'Abstract Forms',
-    subtitle: 'Modern Design',
+    id: 'interior-visualization',
+    url: '/assets/buro_V2.2.png',
+    title: '3D Interior & Product Visualization',
+    subtitle: 'Tabletops and Countertops',
   },
   {
     id: 'minimal-aesthetics',
@@ -55,7 +55,7 @@ export const gallery3DProjects = [
 const featured3DIds = [
   'london-telephone-box',
   'london-street-ue5',
-  'abstract-forms',
+  'interior-visualization',
   'minimal-aesthetics',
 ];
 const featuredGraphicIds = graphicDesignProjects.slice(0, 2).map((p) => p.id);
