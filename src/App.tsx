@@ -1,5 +1,6 @@
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
+import { TechStack } from './components/TechStack';
 import { Projects } from './components/Projects';
 import { GraphicDesign } from './components/GraphicDesign';
 import { Photography } from './components/Photography';
@@ -15,6 +16,8 @@ export default function App() {
 
       <Navigation />
       <Hero />
+
+      <TechStack />
 
       {/* Reduzierter Abstand zwischen Sektionen */}
       <div className="-mt-32">
