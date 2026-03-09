@@ -9,7 +9,7 @@ export const graphicDesignProjects = [
     title: 'BuzzCups - Party Game',
     subtitle: 'Product Design | Packaging & Branding',
     category: 'Product Design',
-    image: 'https://lh3.googleusercontent.com/sitesv/APaQ0STN_7fgqtyuT-oFX4Vpn0oHVx3b85VOsAS8cKm2EXfLdn_JtLB4dFdGwA2IDcV9OUC5bMxDzKBQ9oibN_-a88r_o-lwEnsD2BJe2fvSDxExYBRShYPRy07iwtOftULVETKqywlHxTWYE32qnoRGc9wZF8SLBarfZEig6rTSptI_4e2HzEfI5wI557iZ5xzvvZYFu2Vsj61toKA-64tfCvgQvHw1WU1gqwfV6Yg=w1280',
+    image: '/assets/1.png',
   },
   {
     id: 'pfanner-iced-tea',
