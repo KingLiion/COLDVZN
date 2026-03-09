@@ -31,27 +31,41 @@ const projectDetails = [
     ],
     technologies: ['Blender', 'Substance 3D Designer', 'Substance 3D Painter', 'Adobe Creative Suite', 'Photoshop'],
   },
-  {
-    id: 'minimal-aesthetics',
-    title: 'Minimal Aesthetics',
-    subtitle: 'Contemporary Art',
-    category: '3D Design',
-    date: 'August 2024',
-    description: 'A minimalist approach to 3D design, focusing on clean lines, subtle gradients, and the beauty of simplicity in digital space.',
-    challenge: 'In an era of visual complexity, the challenge was to create compelling work using minimal elements. Every decision needed to be intentional, as there was nowhere to hide imperfections in such a stripped-down aesthetic.',
-    solution: 'By focusing on perfect lighting, subtle material variations, and precise composition, I created a series that proves less can indeed be more. The key was understanding that minimalism doesn\'t mean simple - it means refined. Every shadow, reflection, and edge was carefully considered.',
+ {
+    id: 'material-surface-visualization',
+    title: '3D Material & Surface Visualization – Stone Tabletops and Countertops',
+    subtitle: 'Material Visualization',
+    category: 'Digital 3D',
+    date: 'June 2023 - December 2024',
+    description: 'This project was developed during my work as a 3D Artist at Rückwand24 and focuses on the visualization of stone and marble surfaces used for tabletops and countertops. The goal was to create high-quality material presentations that clearly communicate color, pattern, and surface characteristics. The visualizations were designed to help customers understand how different materials look and behave in realistic interior environments.',
+    
+    challenge: 'The main challenge was translating complex stone and marble materials into believable digital surfaces while preserving their natural variation, depth, and reflectivity. Each material has unique veins, color shifts, and surface characteristics that needed to be represented accurately. At the same time, the visualizations had to remain clear and consistent so that clients could easily compare different material options.',
+    
+    solution: 'I developed a workflow focused on physically based material creation and clean product-focused scene composition. Using Substance 3D tools, I created and refined realistic stone materials with detailed surface maps controlling roughness, reflections, and microstructure. In Blender, I built simple but elegant interior contexts that provide scale and realism while keeping the material as the central visual element. Lighting setups were carefully designed to reveal surface details and highlight the natural patterns of the materials.',
+    
     results: [
-      'Won Best Minimal Design Award at Digital Arts Festival',
-      'Featured on Behance\'s curated gallery',
-      'Commissioned for luxury brand campaign',
-      'Tutorial requests from over 200 designers',
+      'Realistic digital representations of multiple stone and marble materials',
+      'Clear visual comparison between different surface styles and colors',
+      'High-quality product imagery for marketing and online product catalogs',
+      'Production-ready assets for product presentation and customer visualization',
     ],
+    
     images: [
-      'https://images.unsplash.com/photo-1646936190308-6faef1ac893c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwYXJ0fGVufDF8fHx8MTc2MTQwODA1M3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1675350174784-e76296667d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtb2Rlcm4lMjBhcmJiZWN0dXJlJTIwZGVzaWdufGVufDF8fHx8MTc2MTMzOTMyN3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      'https://images.unsplash.com/photo-1722880805722-d212c7630855?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxncmFwaGljJTIwZGVzaWduJTIwd29ya3xlbnwxfHx8fDE3NjE0MDIyODF8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      '/assets/Amazonia_Jade_S.png',
+      '/assets/Calacatta_Vein_S.png',
+      '/assets/Desert_Brown_S.png',
+      '/assets/Marble_Gold_S.png',
+      '/assets/Midnight_Black_S.png',
+      '/assets/Urban_Grey_S.png',
     ],
-    technologies: ['Blender', 'Arnold Renderer', 'Illustrator', 'Figma'],
+    
+    technologies: [
+      'Blender',
+      'Substance 3D Designer',
+      'Substance 3D Painter',
+      'Adobe Creative Suite',
+      'Photoshop'
+    ],
   },
   {
     id: 'london-street-ue5',

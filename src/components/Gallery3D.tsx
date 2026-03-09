@@ -14,9 +14,9 @@ export const gallery3DProjects = [
     subtitle: 'Tabletops and Countertops',
   },
   {
-    id: 'minimal-aesthetics',
-    url: 'https://images.unsplash.com/photo-1646936190308-6faef1ac893c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsJTIwYXJ0fGVufDF8fHx8MTc2MTQwODA1M3ww&ixlib=rb-4.1.0&q=80&w=1080',
-    title: 'Minimal Aesthetics',
+    id: 'Material Visualization',
+    url: '/assets/Calacatta_Vein_S.png',
+    title: 'Material Visualization',
     subtitle: 'Contemporary Art',
   },
   {
