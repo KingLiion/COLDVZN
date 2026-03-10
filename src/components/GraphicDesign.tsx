@@ -57,31 +57,43 @@ This project is to be understood as a conceptual competition design. It shows my
 // detailed descriptions used below for the full-page layout
 const graphicDesignDetails = [
   {
-    id: 'buzz-cups',
-    title: 'BuzzCups - The Party Game with Buzz',
-    subtitle: 'Product Design | Packaging & Branding',
-    category: 'Product Design',
-    date: 'November 2024',
-    description: `BuzzCups is an exciting, fast-paced party game combining skill, speed, and strategy. Players receive 6 colorful shot cups and must arrange them in specific formations according to cards drawn from a shuffled deck. The challenge is to build the correct formation, then buzz in before opponents do. Fast reflexes and accuracy are essential—buzzing with the wrong formation means losing a previously won card.
+  id: 'buzz-cups',
+  title: 'BuzzCups – A Fast-Paced Party Game',
+  subtitle: 'Game Design | Product Design | Packaging',
+  category: 'Game & Product Design',
+  date: 'November 2024',
+  description: `BuzzCups is a party game concept that I developed from the initial idea to the final product design. The project combines game mechanics, visual design, and product development into one cohesive experience.
 
-The game comes in two exciting variants: the Classic version with 2 dimensions (side-by-side and stacked arrangements), and the Extreme version featuring 4 additional challenging dimensions including pyramids, stacking order variations, upside-down configurations, and open-ended placements.
+The core gameplay revolves around speed, pattern recognition, and quick decision-making. Players receive six colorful cups and must arrange them according to formations shown on shuffled cards. Once a player completes the correct configuration, they buzz in to claim the card. However, buzzing with the wrong formation results in losing a previously won card, adding tension and strategy to the fast-paced gameplay.
 
-The design process encompassed the entire product ecosystem: game mechanics, visual communication through instruction cards, colorful and durable product design, and comprehensive packaging that clearly communicates the game's energy and fun factor.`,
-    challenge: "Creating a cohesive visual identity for a complex game product that clearly communicates rules while maintaining excitement and appeal.",
-    solution: "Developed a visual system with clear instruction cards, vibrant color-coded components, and packaging design that immediately conveys the game's fast-paced, party nature. Used dynamic composition and bold typography to create visual impact.",
-    results: ['Complete product ecosystem designed', 'Clear game mechanics through visual communication', 'Engaging packaging design for market appeal'],
-    images: [
-      '/assets/1.png',
-      '/assets/2.png',
-      '/assets/3.png',
-      '/assets/4.png',
-      '/assets/5.png',
-      '/assets/6.png',
-      '/assets/7.png',
-      '/assets/8.png',
-    ],
-    technologies: ['Illustrator', 'Photoshop', 'Product Design'],
-  },
+Beyond the mechanics, I designed the complete visual identity of the game. This includes the card system that communicates the formations clearly, the colorful cup design, and the packaging that reflects the energetic and social nature of the game.
+
+The game features two gameplay modes: a Classic version focusing on two-dimensional formations and an Extreme version introducing additional spatial challenges such as pyramids, stacking variations, upside-down placements, and more complex spatial configurations. The goal was to create a simple concept that becomes increasingly challenging and engaging as players progress.`,
+  
+  challenge: 'Developing a party game that is easy to understand but still dynamic and competitive, while designing a visual system that clearly communicates the gameplay mechanics. The challenge was balancing intuitive rules with visually clear card instructions and creating a cohesive product design that works both as a game and as a marketable product.',
+  
+  solution: 'I developed the core game mechanics, designed the card system that visually communicates the required cup formations, and created the full product design including packaging and branding. The cards were designed to quickly communicate spatial arrangements through clear visual cues, while the packaging uses bold colors and dynamic typography to reflect the fast-paced nature of the game. By designing every element—from gameplay to visual communication—I created a cohesive game experience that is both intuitive and visually engaging.',
+  
+  results: [
+    'Complete original party game concept developed',
+    'Custom card system designed for intuitive gameplay',
+    'Full product and packaging design created',
+    'Cohesive visual identity connecting gameplay and branding'
+  ],
+  
+  images: [
+    '/assets/1.png',
+    '/assets/2.png',
+    '/assets/3.png',
+    '/assets/4.png',
+    '/assets/5.png',
+    '/assets/6.png',
+    '/assets/7.png',
+    '/assets/8.png',
+  ],
+  
+  technologies: ['Illustrator', 'Photoshop', 'Product Design', 'Game Design'],
+},
   {
     id: 'pfanner-iced-tea',
     title: 'Pfanner Iced Tea – Blueberry',

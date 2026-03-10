@@ -14,7 +14,7 @@ export const gallery3DProjects = [
     subtitle: 'Tabletops and Countertops',
   },
   {
-    id: 'Material Visualization',
+    id: 'material-surface-visualization',
     url: '/assets/Calacatta_Vein_S.png',
     title: 'Material Visualization',
     subtitle: 'Contemporary Art',
@@ -26,10 +26,10 @@ export const gallery3DProjects = [
     subtitle: 'Realtime Environment / Lighting',
   },
   {
-    id: 'organic-flow',
-    url: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHwzRCUyMGFic3RyYWN0JTIwc2hhcGVzfGVufDF8fHx8MTc2MTQ1Njc4N3ww&ixlib=rb-4.1.0&q=80&w=1080',
-    title: 'Organic Flow',
-    subtitle: 'Fluid Dynamics',
+    id: 'mirror-product-visualization',
+    url: '/assets/Mirror_Livingroom_V2.2.1.png',
+    title: 'Mirror Product Visualization',
+    subtitle: 'Reflective Surfaces',
   },
   {
     id: 'crystalline-structure',

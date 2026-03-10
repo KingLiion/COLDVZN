@@ -67,61 +67,61 @@ const projectDetails = [
       'Photoshop'
     ],
   },
-  {
-    id: 'london-street-ue5',
-    title: 'Atmospheric Realtime Environment - London Street (UE5.1)',
-    subtitle: 'Real-time Environment / Lighting',
-    category: 'Digital 3D',
-    date: 'February 2026',
-    description:
-      'The goal of this project was the development of a high-quality real-time environment with a strong focus on lighting, material response, and atmosphere. A single consistent scene was iteratively reinterpreted through varying lighting and weather conditions (daylight, evening, fog and rain) to showcase mood, reflections and material response in Unreal Engine 5.1. Assets were produced with a production-oriented workflow prioritizing modularity and performance.',
-    challenge:
-      'Maintaining visual quality and performance in a real-time scene while achieving convincing material response (especially on wet surfaces) and atmospheric depth. The project required balancing asset reuse via modular building blocks and high-fidelity hero assets.',
-    solution:
-      'A modular street architecture enabled efficient asset reuse. Materials were authored in Substance Designer/Painter with deliberate roughness variation and localized wear. Lighting scenarios (warm/cold contrast, volumetric fog, and rain reflections) were iterated to define depth, guide the viewer and create distinct moods across the same geometry.',
-    results: [
-      'Featured on ArtStation',
-      'Production-ready modular environment',
-      'Optimized real-time rendering in UE5.1',
-    ],
-    images: [
-      'https://cdna.artstation.com/p/assets/images/images/096/655/378/large/leon-kaltenschnee-highresscreenshot00001-1.webp?1771957329',
-      'https://cdna.artstation.com/p/assets/images/images/096/655/392/large/leon-kaltenschnee-highresscreenshot00009.webp?1771957369',
-      'https://cdnb.artstation.com/p/assets/images/images/096/720/009/large/leon-kaltenschnee-psx-20260226-161722.webp?1772121839',
-      'https://cdnb.artstation.com/p/assets/images/images/096/720/013/large/leon-kaltenschnee-psx-20260226-161310.webp?1772121845',
-      'https://cdna.artstation.com/p/assets/images/images/096/720/322/large/leon-kaltenschnee-leon-kaltenschnee-render-005-1.webp?1772122478',
-      'https://cdna.artstation.com/p/assets/images/images/096/727/742/large/leon-kaltenschnee-strassenmat2-kamera.webp?1772135567',
-      'https://cdnb.artstation.com/p/assets/images/images/096/720/507/large/leon-kaltenschnee-leon-kaltenschnee-nacht-licht-normal.webp?1772122828',
-      'https://cdna.artstation.com/p/assets/images/images/096/729/114/large/leon-kaltenschnee-gebaude.webp?1772138247',
-    ],
-    technologies: ['Substance 3D Designer', 'Substance 3D Painter', '3ds Max', 'Maya', 'Blender', 'Unreal Engine', 'Photoshop'],
-    show3DModel: false,
-  },
-  {
-    id: 'organic-flow',
-    title: 'Organic Flow',
-    subtitle: 'Fluid Dynamics',
-    category: '3D Design',
-    date: 'June 2024',
-    description:
-      'A study in fluid simulation and organic forms, exploring the natural movement and evolution of shapes in digital space.',
-    challenge:
-      'Simulating realistic fluid dynamics while maintaining artistic control over the final form. The challenge was to let the physics guide the design while still achieving a visually compelling composition.',
-    solution:
-      'Combining particle systems with force fields and dynamic meshes, I created a workflow that balanced procedural generation with manual refinement. The result is a series that feels both naturally occurring and intentionally designed.',
-    results: [
-      'Featured in Motion Graphics Quarterly',
-      'Used in brand campaign for luxury perfume',
-      'Workshop invitation at design conference',
-      'Over 100,000 impressions on Behance',
-    ],
-    images: [
-      'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      'https://images.unsplash.com/photo-1710858775474-08799a698bbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-      'https://images.unsplash.com/photo-1759265685207-4f3ca08233b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080',
-    ],
-    technologies: ['Houdini', 'Redshift', 'Cinema 4D', 'X-Particles'],
-  },
+ {
+  id: 'mirror-product-visualization',
+  title: '3D Interior Visualization – Mirror Product Rendering',
+  subtitle: 'Product Visualization',
+  category: 'Digital 3D',
+  date: 'June 2023 - December 2024',
+  description: `This project was created during my professional work as a 3D Artist at Rückwand24 and focuses on the realistic visualization of a decorative wall mirror within carefully designed interior environments. The goal was to present the mirror not as an isolated product, but as part of contemporary living spaces that communicate both function and atmosphere.
+
+To achieve this, I developed several interior scenes including a bathroom and a living room environment. Each scene was designed to demonstrate how the mirror integrates naturally into modern interior design while maintaining a clear visual focus on the product itself. The renderings simulate real residential spaces and provide viewers with a realistic sense of scale, placement, and spatial interaction.
+
+A major aspect of the project was the accurate representation of reflective surfaces and spatial depth. Mirrors are particularly challenging in 3D visualization because they require believable reflections of the surrounding environment while avoiding visual clutter or distracting elements. Therefore, the scenes were carefully structured to control what appears within the mirror reflection, ensuring that the reflections enhance the realism of the space without overwhelming the composition.
+
+The visual style follows a contemporary interior design language commonly used in modern furniture catalogs and online product presentations. Recognizable design elements such as minimal furniture, soft lighting, plants, textured walls, and decorative accessories create an authentic lifestyle setting that helps customers imagine the product in their own homes.
+
+The final renderings were used as high-quality product imagery for marketing and product presentation, demonstrating how professional 3D visualization can effectively communicate design, material quality, and spatial context to customers.`,
+
+  challenge: `One of the main challenges of this project was achieving convincing mirror reflections within complex interior scenes while maintaining a clear and controlled visual composition.
+
+Because mirrors reflect the entire surrounding environment, every object placed in the scene needs to be carefully considered. Uncontrolled reflections can easily create visual noise or distract from the main product. Additionally, the lighting needed to be carefully balanced so that the reflective surface behaves realistically while the surrounding interior remains visually appealing and readable.
+
+Another challenge was maintaining the mirror as the visual focal point while still creating a believable interior environment that feels natural and lived in.`,
+
+  solution: `To address these challenges, I developed a structured workflow focused on controlled scene composition, realistic lighting setups, and physically based materials.
+
+First, I designed the interior environments in a modular way. Furniture, plants, and decorative objects were placed strategically so that they appear naturally within the mirror reflections without distracting from the product itself. This allowed the reflections to support the realism of the scene while maintaining visual clarity.
+
+Within Blender, I used physically based rendering techniques to accurately simulate reflective surfaces and realistic material behavior. Lighting setups were carefully arranged using a combination of natural light sources and subtle interior lighting to create soft shadows and believable light distribution across the space.
+
+Camera composition also played an important role in the final images. I selected angles that clearly present the mirror’s shape, frame, and placement while allowing the reflected environment to extend the perceived depth of the scene. By carefully balancing interior design, lighting, and reflection behavior, the final renders create a convincing and visually appealing product presentation.
+
+This workflow demonstrates my ability to translate real-world interior design principles into digital environments and to produce production-ready visualizations suitable for marketing, e-commerce platforms, and professional product presentations.`,
+
+  results: [
+    'High-quality mirror product visualizations for marketing and online presentation',
+    'Realistic interior scenes demonstrating product placement and spatial interaction',
+    'Accurate handling of reflections and lighting within complex 3D environments',
+    'Professional visualization pipeline used in a real production environment'
+  ],
+
+  images: [
+    '/assets/Mirror_Bath_V1.png',
+    '/assets/Mirror.Bath_V1.3.2.png',
+    '/assets/Mirror.Bath_V1.3.3.png',
+    '/assets/Mirror_Livingroom_V1.3.png',
+    '/assets/Mirror_Livingroom_V2.2.1.png'
+  ],
+
+  technologies: [
+    'Blender',
+    'Substance 3D Designer',
+    'Substance 3D Painter',
+    'Adobe Creative Suite',
+    'Photoshop'
+  ]
+},
   {
     id: 'crystalline-structure',
     title: 'Crystalline Structure',
