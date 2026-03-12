@@ -25,7 +25,7 @@ const skills: Skill[] = [
   {
     id: 'maya',
     name: 'Maya',
-    logo: 'https://cdn.worldvectorlogo.com/logos/autodesk-maya.svg',
+    logo: 'assets/mayalogo.png',
   },
   {
     id: '3dsmax',
