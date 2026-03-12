@@ -67,6 +67,36 @@ const projectDetails = [
       'Photoshop'
     ],
   },
+  {
+    id: 'london-street-ue5',
+    title: 'Atmospheric Realtime Environment - London Street (UE5.1)',
+    subtitle: 'Real-time Environment / Lighting',
+    category: 'Digital 3D',
+    date: 'February 2026',
+    description:
+      'The goal of this project was the development of a high-quality real-time environment with a strong focus on lighting, material response, and atmosphere. A single consistent scene was iteratively reinterpreted through varying lighting and weather conditions (daylight, evening, fog and rain) to showcase mood, reflections and material response in Unreal Engine 5.1. Assets were produced with a production-oriented workflow prioritizing modularity and performance.',
+    challenge:
+      'Maintaining visual quality and performance in a real-time scene while achieving convincing material response (especially on wet surfaces) and atmospheric depth. The project required balancing asset reuse via modular building blocks and high-fidelity hero assets.',
+    solution:
+      'A modular street architecture enabled efficient asset reuse. Materials were authored in Substance Designer/Painter with deliberate roughness variation and localized wear. Lighting scenarios (warm/cold contrast, volumetric fog, and rain reflections) were iterated to define depth, guide the viewer and create distinct moods across the same geometry.',
+    results: [
+      'Featured on ArtStation',
+      'Production-ready modular environment',
+      'Optimized real-time rendering in UE5.1',
+    ],
+    images: [
+      'https://cdna.artstation.com/p/assets/images/images/096/655/378/large/leon-kaltenschnee-highresscreenshot00001-1.webp?1771957329',
+      'https://cdna.artstation.com/p/assets/images/images/096/655/392/large/leon-kaltenschnee-highresscreenshot00009.webp?1771957369',
+      'https://cdnb.artstation.com/p/assets/images/images/096/720/009/large/leon-kaltenschnee-psx-20260226-161722.webp?1772121839',
+      'https://cdnb.artstation.com/p/assets/images/images/096/720/013/large/leon-kaltenschnee-psx-20260226-161310.webp?1772121845',
+      'https://cdna.artstation.com/p/assets/images/images/096/720/322/large/leon-kaltenschnee-leon-kaltenschnee-render-005-1.webp?1772122478',
+      'https://cdna.artstation.com/p/assets/images/images/096/727/742/large/leon-kaltenschnee-strassenmat2-kamera.webp?1772135567',
+      'https://cdnb.artstation.com/p/assets/images/images/096/720/507/large/leon-kaltenschnee-leon-kaltenschnee-nacht-licht-normal.webp?1772122828',
+      'https://cdna.artstation.com/p/assets/images/images/096/729/114/large/leon-kaltenschnee-gebaude.webp?1772138247',
+    ],
+    technologies: ['Substance 3D Designer', 'Substance 3D Painter', '3ds Max', 'Maya', 'Blender', 'Unreal Engine', 'Photoshop'],
+    show3DModel: false,
+  },
  {
   id: 'mirror-product-visualization',
   title: '3D Interior Visualization – Mirror Product Rendering',
