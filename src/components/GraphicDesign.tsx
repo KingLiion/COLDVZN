@@ -46,11 +46,11 @@ Project context
 This project is to be understood as a conceptual competition design. It shows my approach to working with fixed brand guidelines and deliberately interpreting them creatively without losing their function or recognizability.`,
   },
   {
-    id: 'eco-tech',
-    title: 'EcoTech Solutions',
-    subtitle: 'Sustainable Brand Identity',
-    category: 'Branding',
-    image: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBicmFuZGluZ3xlbnwxfHx8fDE3NjE1NjAzNTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    id: 'Party-Pong',
+    title: 'Party-Pong – A Dynamic Twist on Beer Pong',
+    subtitle: 'Game Design | Product Design | Packaging',
+    category: 'Game & Product Design',
+    image: '/assets/partypongspiel.webp',
   },
 ];
 
@@ -134,20 +134,37 @@ This project is to be understood as a conceptual competition design. It shows my
     technologies: ['Illustrator', 'Photoshop'],
   },
   {
-    id: 'eco-tech',
-    title: 'EcoTech Solutions',
-    subtitle: 'Sustainable Brand Identity',
-    category: 'Branding',
-    date: 'June 2024',
-    description: 'A branding package for a fictional eco‑technology startup, featuring leaf motifs and a clean sans-serif logotype.',
-    challenge: 'Conveying innovation and sustainability without relying on clichés.',
-    solution: 'Used a muted green palette and abstract geometric forms to suggest both circuitry and foliage.',
-    results: ['Concept designs well received in class'],
-    images: [
-      'https://images.unsplash.com/photo-1626785774573-4b799315345d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBicmFuZGluZ3xlbnwxfHx8fDE3NjE1NjAzNTl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    ],
-    technologies: ['Illustrator', 'Figma'],
-  },
+  id: 'Party-Pong',
+  title: 'Party-Pong – A Dynamic Twist on Beer Pong',
+  subtitle: 'Visual Design | Packaging | Logo Design',
+  category: 'Game & Product Design',
+  date: 'March 2023',
+  description: `Party-Pong is a playful card-based extension for Beer Pong, designed to add excitement and variety to the classic party game. While the gameplay actions were provided by the client, I was responsible for bringing each action to life visually, creating a cohesive and appealing experience.
+
+The game consists of cards with unique actions that players perform before each throw. My role focused on designing these cards, ensuring each action was represented with clear, dynamic, and visually engaging graphics. Additionally, I created the full packaging and logo design, establishing a recognizable brand identity for the game.
+
+Using Photoshop and Illustrator, I developed a visual language that balances fun, readability, and style. Each card communicates the action at a glance, while the packaging design conveys the energetic and social spirit of the game. The goal was to translate playful game mechanics into an intuitive and visually striking product that stands out in a party setting.`,
+  
+  challenge: 'Translating pre-defined game actions into a visual language that is immediately understandable, engaging, and cohesive with the brand identity. The challenge was to ensure that the cards were visually distinct, the packaging was attractive for retail, and the overall aesthetic aligned with the playful nature of the game.',
+
+  solution: 'I designed each card to clearly communicate the corresponding action through illustrative graphics and dynamic layouts. The packaging and logo were developed to unify the visual identity, using bold typography, playful color schemes, and energetic composition. My design approach ensured that each element—from individual cards to the overall product—works together to enhance the player experience and the product’s market appeal.',
+  
+  results: [
+    'Full visual design for all game cards completed',
+    'Packaging and logo design created to establish brand identity',
+    'Consistent and playful visual language applied across all assets',
+    'Product visually communicates game mechanics and party energy effectively'
+  ],
+  
+  images: [
+    '/assets/partypongspiel.webp',
+    '/assets/Partypongkarten-1.webp',
+    '/assets/partypongkarten-2.webp',
+    ,
+  ],
+  
+  technologies: ['Illustrator', 'Photoshop', 'Product Design', 'Visual Communication'],
+}
 ];
 
 export function GraphicDesign() {

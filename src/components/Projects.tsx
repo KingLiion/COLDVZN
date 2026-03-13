@@ -57,6 +57,7 @@ const projectDetails = [
       '/assets/Marble_Gold_S.webp',
       '/assets/Midnight_Black_S.webp',
       '/assets/Urban_Grey_S.webp',
+      '/assets/glaspic.webp',
     ],
     
     technologies: [
