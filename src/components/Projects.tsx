@@ -22,12 +22,12 @@ const projectDetails = [
       'Production-ready assets for client presentations',
     ],
     images: [
-      '/assets/buro_V2.2.png',
-      '/assets/Küche-ZimmerV2.png',
-      '/assets/ZimmerV2.png',
-      '/assets/küche-zimmer.png',
-      '/assets/buro_nah_V2.png',
-      '/assets/Esszimmer_V1.png',
+      '/assets/buro_V2.2.webp',
+      '/assets/Küche-ZimmerV2.webp',
+      '/assets/ZimmerV2.webp',
+      '/assets/küche-zimmer.webp',
+      '/assets/buro_nah_V2.webp',
+      '/assets/Esszimmer_V1.webp',
     ],
     technologies: ['Blender', 'Substance 3D Designer', 'Substance 3D Painter', 'Adobe Creative Suite', 'Photoshop'],
   },
@@ -51,12 +51,12 @@ const projectDetails = [
     ],
     
     images: [
-      '/assets/Amazonia_Jade_S.png',
-      '/assets/Calacatta_Vein_S.png',
-      '/assets/Desert_Brown_S.png',
-      '/assets/Marble_Gold_S.png',
-      '/assets/Midnight_Black_S.png',
-      '/assets/Urban_Grey_S.png',
+      '/assets/Amazonia_Jade_S.webp',
+      '/assets/Calacatta_Vein_S.webp',
+      '/assets/Desert_Brown_S.webp',
+      '/assets/Marble_Gold_S.webp',
+      '/assets/Midnight_Black_S.webp',
+      '/assets/Urban_Grey_S.webp',
     ],
     
     technologies: [
@@ -137,11 +137,11 @@ This workflow demonstrates my ability to translate real-world interior design pr
   ],
 
   images: [
-    '/assets/Mirror_Bath_V1.png',
-    '/assets/Mirror.Bath_V1.3.2.png',
-    '/assets/Mirror.Bath_V1.3.3.png',
-    '/assets/Mirror_Livingroom_V1.3.png',
-    '/assets/Mirror_Livingroom_V2.2.1.png'
+    '/assets/Mirror_Bath_V1.webp',
+    '/assets/Mirror.Bath_V1.3.2.webp',
+    '/assets/Mirror.Bath_V1.3.3.webp',
+    '/assets/Mirror_Livingroom_V1.3.webp',
+    '/assets/Mirror_Livingroom_V2.2.1.webp'
   ],
 
   technologies: [

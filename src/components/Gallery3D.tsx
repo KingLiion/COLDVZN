@@ -9,13 +9,13 @@ export const gallery3DProjects = [
 
   {
     id: 'interior-visualization',
-    url: '/assets/buro_V2.2.png',
+    url: '/assets/buro_V2.2.webp',
     title: '3D Interior & Product Visualization',
     subtitle: 'Tabletops and Countertops',
   },
   {
     id: 'material-surface-visualization',
-    url: '/assets/Calacatta_Vein_S.png',
+    url: '/assets/Calacatta_Vein_S.webp',
     title: 'Material Visualization',
     subtitle: 'Contemporary Art',
   },
@@ -27,7 +27,7 @@ export const gallery3DProjects = [
   },
   {
     id: 'mirror-product-visualization',
-    url: '/assets/Mirror_Livingroom_V2.2.1.png',
+    url: '/assets/Mirror_Livingroom_V2.2.1.webp',
     title: 'Mirror Product Visualization',
     subtitle: 'Reflective Surfaces',
   },

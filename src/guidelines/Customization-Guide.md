@@ -500,7 +500,7 @@ const photographyImages = [
 
 **Bild wird nicht angezeigt?**
 - Überprüfe die URL (sollte mit `https://` beginnen)
-- Stelle sicher, dass die URL direkt zum Bild führt (.jpg, .png, etc.)
+- Stelle sicher, dass die URL direkt zum Bild führt (.jpg, .webp, etc.)
 - Teste die URL in einem neuen Browser-Tab
 
 **3D-Modell wird nicht angezeigt?**

@@ -9,14 +9,14 @@ export const graphicDesignProjects = [
     title: 'BuzzCups - Party Game',
     subtitle: 'Product Design | Packaging & Branding',
     category: 'Product Design',
-    image: '/assets/1.png',
+    image: '/assets/1.webp',
   },
   {
     id: 'pfanner-iced-tea',
     title: 'Pfanner Iced Tea – Blueberry',
     subtitle: 'Packaging Design | Competition Concept',
     category: 'Packaging',
-    image: '/assets/PfannerDesign2.3.png',
+    image: '/assets/PfannerDesign2.3.webp',
     description: `This packaging design draft was created as part of an open design competition by Pfanner. The basis of the project was a predefined template structure consisting of the Pfanner logo, a vertical dividing line, and the basic lettering. These elements formed the design framework within which a free, independent interpretation could be developed.
 
 The goal of my design was to portray the blueberry flavor emotionally and visually powerfully – deliberately detached from the classic core range. The focus was on a strong taste association, dynamism, and a high level of recognizability. Through intense color contrasts, a dense illustrative imagery, and dynamic compositions, freshness, fruitiness, and energy were to be conveyed.
@@ -82,14 +82,14 @@ The game features two gameplay modes: a Classic version focusing on two-dimensio
   ],
   
   images: [
-    '/assets/1.png',
-    '/assets/2.png',
-    '/assets/3.png',
-    '/assets/4.png',
-    '/assets/5.png',
-    '/assets/6.png',
-    '/assets/7.png',
-    '/assets/8.png',
+    '/assets/1.webp',
+    '/assets/2.webp',
+    '/assets/3.webp',
+    '/assets/4.webp',
+    '/assets/5.webp',
+    '/assets/6.webp',
+    '/assets/7.webp',
+    '/assets/8.webp',
   ],
   
   technologies: ['Illustrator', 'Photoshop', 'Product Design', 'Game Design'],
@@ -130,7 +130,7 @@ This project is to be understood as a conceptual competition design. It shows my
     challenge: 'Working within strict brand guidelines while still producing something visually distinctive.',
     solution: 'Exploited the two‑sided template to create a split composition and used bold colors to stand out.',
     results: ['Entered into competition', 'Positive feedback from peers'],
-    images: ['/assets/PfannerDesign2.3.png', '/assets/icetea-Kamera.png'],
+    images: ['/assets/PfannerDesign2.3.webp', '/assets/icetea-Kamera.webp'],
     technologies: ['Illustrator', 'Photoshop'],
   },
   {

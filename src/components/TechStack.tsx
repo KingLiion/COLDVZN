@@ -6,17 +6,17 @@ interface TechItem {
 }
 
 const tools: TechItem[] = [
-  { name: "3ds Max", logo: "/assets/autodesk-3ds-max-product-icon-1282x.png" },
-  { name: "Maya", logo: "/assets/Mayalogo.png" },
-  { name: "Blender", logo: "/assets/Blender_logo_no_text.svg.png" },
-  { name: "Substance Painter", logo: "/assets/painterlogo.png" },
-  { name: "Substance Designer", logo: "/assets/designerlogo.png" },
-  { name: "Unreal Engine", logo: "/assets/icons8-unreal-engine-500.png" },
-  { name: "Adobe Creative Cloud", logo: "/assets/Adobe_Creative_Cloud_rainbow_icon.svg.png" },
-  { name: "Figma", logo: "/assets/icons8-figma-480.png" },
-  { name: "Canva", logo: "/assets/canvalogo.png" },
-  { name: "MS Office", logo: "/assets/MSOffice.png" },
-  { name: "ZBrush", logo: "/assets/zbrush.png" }
+  { name: "3ds Max", logo: "/assets/autodesk-3ds-max-product-icon-1282x.webp" },
+  { name: "Maya", logo: "/assets/Mayalogo.webp" },
+  { name: "Blender", logo: "/assets/Blender_logo_no_text.svg.webp" },
+  { name: "Substance Painter", logo: "/assets/painterlogo.webp" },
+  { name: "Substance Designer", logo: "/assets/designerlogo.webp" },
+  { name: "Unreal Engine", logo: "/assets/icons8-unreal-engine-500.webp" },
+  { name: "Adobe Creative Cloud", logo: "/assets/Adobe_Creative_Cloud_rainbow_icon.svg.webp" },
+  { name: "Figma", logo: "/assets/icons8-figma-480.webp" },
+  { name: "Canva", logo: "/assets/canvalogo.webp" },
+  { name: "MS Office", logo: "/assets/MSOffice.webp" },
+  { name: "ZBrush", logo: "/assets/zbrush.webp" }
 ];
 
 

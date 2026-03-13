@@ -25,7 +25,7 @@ const skills: Skill[] = [
   {
     id: 'maya',
     name: 'Maya',
-    logo: 'assets/mayalogo.png',
+    logo: 'assets/mayalogo.webp',
   },
   {
     id: '3dsmax',
@@ -55,7 +55,7 @@ const skills: Skill[] = [
   {
     id: 'arnold',
     name: 'Arnold',
-    logo: 'https://www.arnoldrenderer.com/site/assets/files/2231/arn_icon_new-7@2x.png',
+    logo: 'https://www.arnoldrenderer.com/site/assets/files/2231/arn_icon_new-7@2x.webp',
   },
   {
     id: 'redshift',
