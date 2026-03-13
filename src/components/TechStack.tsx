@@ -19,9 +19,6 @@ const tools: TechItem[] = [
   { name: "ZBrush", logo: "/assets/zbrush.webp" }
 ];
 
-
-/* --------- Funktion erzeugt Reihen im Muster 5 / 3 / 5 / 3 --------- */
-
 function createRows(items: TechItem[]) {
   const rows: TechItem[][] = [];
   let index = 0;
@@ -38,9 +35,6 @@ function createRows(items: TechItem[]) {
 }
 
 const rows = createRows(tools);
-
-
-/* ---------------- COMPONENT ---------------- */
 
 export function TechStack() {
   return (
@@ -66,8 +60,7 @@ export function TechStack() {
           </p>
         </motion.div>
 
-
-        <div className="space-y-12">
+        <div className="space-y-10 md:space-y-12">
 
           {rows.map((row, rowIndex) => {
 
@@ -76,8 +69,10 @@ export function TechStack() {
             return (
               <div
                 key={rowIndex}
-                className="flex justify-center gap-12"
-                style={{ marginLeft: offset ? "120px" : "0px" }}
+                className="flex justify-center gap-6 md:gap-12"
+                style={{
+                  marginLeft: offset ? "120px" : "0px"
+                }}
               >
 
                 {row.map((tech, index) => (
@@ -91,22 +86,22 @@ export function TechStack() {
                       duration: 0.6,
                       delay: index * 0.08
                     }}
-                    className="flex flex-col items-center group w-32"
+                    className="flex flex-col items-center group w-20 md:w-32"
                   >
 
-                    <div className="w-20 h-20 flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-110">
+                    <div className="w-14 h-14 md:w-20 md:h-20 flex items-center justify-center mb-2 md:mb-3 transition-transform duration-300 group-hover:scale-110">
 
                       <img
                         src={tech.logo}
                         alt={tech.name}
-                        className="max-w-full max-h-full object-contain filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                        className="w-12 h-12 md:w-16 md:h-16 object-contain filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                         loading="lazy"
                         decoding="async"
                       />
 
                     </div>
 
-                    <p className="text-center text-white/70 group-hover:text-ice-400 transition-colors duration-300 text-sm font-medium whitespace-nowrap">
+                    <p className="text-center text-white/70 group-hover:text-ice-400 transition-colors duration-300 text-xs md:text-sm font-medium">
                       {tech.name}
                     </p>
 
