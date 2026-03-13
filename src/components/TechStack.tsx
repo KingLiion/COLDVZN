@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from "motion/react";
 
 interface TechItem {
   name: string;
@@ -6,18 +6,41 @@ interface TechItem {
 }
 
 const tools: TechItem[] = [
-  { name: '3ds Max', logo: '/assets/autodesk-3ds-max-product-icon-1282x.png' },
-  { name: 'Maya', logo: '/assets/Mayalogo.png' },
-  { name: 'Blender', logo: '/assets/Blender_logo_no_text.svg.png' },
-  { name: 'Substance Painter', logo: '/assets/painterlogo.png' },
-  { name: 'Substance Designer', logo: '/assets/designerlogo.png' },
-  { name: 'Unreal Engine', logo: '/assets/icons8-unreal-engine-500.png' },
-  { name: 'Adobe Creative Cloud', logo: '/assets/Adobe_Creative_Cloud_rainbow_icon.svg.png' },
-  { name: 'Figma', logo: '/assets/icons8-figma-480.png' },
-  { name: 'Canva', logo: '/assets/canvalogo.png' },
-  { name: 'MS Office', logo: '/assets/MSOffice.png' },
-  { name: 'ZBrush', logo: '/assets/zbrush.png' },
+  { name: "3ds Max", logo: "/assets/autodesk-3ds-max-product-icon-1282x.png" },
+  { name: "Maya", logo: "/assets/Mayalogo.png" },
+  { name: "Blender", logo: "/assets/Blender_logo_no_text.svg.png" },
+  { name: "Substance Painter", logo: "/assets/painterlogo.png" },
+  { name: "Substance Designer", logo: "/assets/designerlogo.png" },
+  { name: "Unreal Engine", logo: "/assets/icons8-unreal-engine-500.png" },
+  { name: "Adobe Creative Cloud", logo: "/assets/Adobe_Creative_Cloud_rainbow_icon.svg.png" },
+  { name: "Figma", logo: "/assets/icons8-figma-480.png" },
+  { name: "Canva", logo: "/assets/canvalogo.png" },
+  { name: "MS Office", logo: "/assets/MSOffice.png" },
+  { name: "ZBrush", logo: "/assets/zbrush.png" }
 ];
+
+
+/* --------- Funktion erzeugt Reihen im Muster 5 / 3 / 5 / 3 --------- */
+
+function createRows(items: TechItem[]) {
+  const rows: TechItem[][] = [];
+  let index = 0;
+  let fiveRow = true;
+
+  while (index < items.length) {
+    const size = fiveRow ? 5 : 3;
+    rows.push(items.slice(index, index + size));
+    index += size;
+    fiveRow = !fiveRow;
+  }
+
+  return rows;
+}
+
+const rows = createRows(tools);
+
+
+/* ---------------- COMPONENT ---------------- */
 
 export function TechStack() {
   return (
@@ -33,7 +56,7 @@ export function TechStack() {
         >
           <h2
             className="mb-4 bg-gradient-to-r from-ice-200 via-ice-400 to-ice-200 bg-clip-text text-transparent"
-            style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)' }}
+            style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
           >
             Software & Tools
           </h2>
@@ -43,34 +66,57 @@ export function TechStack() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-12">
 
-          {tools.map((tech, index) => (
-            <motion.div
-              key={tech.name + index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
-              className="flex flex-col items-center group"
-            >
+        <div className="space-y-12">
 
-              <div className="w-24 h-24 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110">
-                <img
-                  src={tech.logo}
-                  alt={tech.name}
-                  className="max-w-full max-h-full object-contain filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                  loading="lazy"
-                  decoding="async"
-                />
+          {rows.map((row, rowIndex) => {
+
+            const offset = rowIndex % 2 === 1;
+
+            return (
+              <div
+                key={rowIndex}
+                className="flex justify-center gap-12"
+                style={{ marginLeft: offset ? "120px" : "0px" }}
+              >
+
+                {row.map((tech, index) => (
+
+                  <motion.div
+                    key={tech.name + index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.08
+                    }}
+                    className="flex flex-col items-center group w-32"
+                  >
+
+                    <div className="w-20 h-20 flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-110">
+
+                      <img
+                        src={tech.logo}
+                        alt={tech.name}
+                        className="max-w-full max-h-full object-contain filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                        loading="lazy"
+                        decoding="async"
+                      />
+
+                    </div>
+
+                    <p className="text-center text-white/70 group-hover:text-ice-400 transition-colors duration-300 text-sm font-medium whitespace-nowrap">
+                      {tech.name}
+                    </p>
+
+                  </motion.div>
+
+                ))}
+
               </div>
-
-              <p className="text-center text-white/70 group-hover:text-ice-400 transition-colors duration-300 text-sm font-medium whitespace-nowrap">
-                {tech.name}
-              </p>
-
-            </motion.div>
-          ))}
+            );
+          })}
 
         </div>
 
