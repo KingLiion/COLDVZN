@@ -4,8 +4,10 @@ import { Sparkles, Layers, Palette, Camera, Code, Briefcase, GraduationCap, Down
 const skills = [
   { icon: Layers, category: '3D Design', items: ['Blender', '3ds Max', 'Substance Tools', 'ZBrush', 'Unreal Engine'] },
   { icon: Palette, category: 'Graphic Design', items: ['Illustrator', 'Photoshop', 'Canva', 'Figma'] },
-  { icon: Camera, category: 'Photography', items: ['Landscape', 'Architecture', 'Street'] },
-  { icon: Code, category: 'Development', items: ['React', 'Three.js', 'WebGL', 'GLSL'] },
+  { icon: Camera, category: 'Photography & Video Editing', items: ['Landscape', 'Architecture', 'Adobe Creative Suite'] },
+  { icon: Code, category: 'AI & Development', items: ['Prompt Engineering',
+  'Generative AI Workflows',
+  'AI-Assisted Prototyping', 'WebGL'] },
 ];
 
 const careerPath = [
